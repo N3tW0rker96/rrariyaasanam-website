@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rihana Raseem — Creative Technologist & Developer | Poem Writing, Voiceover, Software Development</title>
+    <meta name="title" content="Rihana Raseem — Creative Technologist & Developer">
+    <meta name="description" content="Rihana Raseem offers premium creative services including Poem Writing, Voiceover, Script Preparation, Software Development, Books Design, Graphics Design, and Book Publishing. Crafting exceptional digital & creative experiences.">
+    <meta name="keywords" content="Rihana Raseem, poem writing, voiceover artist, script writing, software development, book design, graphics design, book publishing, creative technologist, Sri Lanka">
+    <meta name="author" content="Rihana Raseem">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rrariyaasanam.com">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5/400.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5/500.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5/600.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5/700.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5/800.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fontsource-inter@5/900.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: { 500:'#5c7cfa' },
+                        accent: { 50:'#f3e8ff',100:'#e9d5ff',200:'#d8b4fe',300:'#c084fc',400:'#a855f7',500:'#9333ea',600:'#7c3aed',700:'#6d28d9',800:'#5b21b6',900:'#4c1d95',950:'#3b0764' },
+                        dark: { 50:'#f8fafc',100:'#f1f5f9',200:'#e2e8f0',300:'#cbd5e1',400:'#94a3b8',500:'#64748b',600:'#475569',700:'#334155',800:'#1e293b',900:'#0f172a',950:'#020617' },
+                        rose: { 400:'#fb7185',500:'#f43f5e',600:'#e11d48' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP & Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    
+    <!-- Three.js & Tone.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        ::selection { background: rgba(168,85,247,0.3); color: inherit; }
+        ::-webkit-scrollbar { width:6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(168,85,247,0.4); border-radius:3px; }
+        html { font-family: 'Inter', sans-serif; }
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+        /* UIVERSE: Advanced Preloader Spinner */
+        #preloader { transition: opacity 0.8s ease-out, visibility 0.8s; z-index: 100000; }
+        #preloader.hidden-preloader { opacity: 0; visibility: hidden; pointer-events: none; }
+        .uiverse-spinner { width: 70px; height: 70px; position: relative; animation: spin 2.5s linear infinite; }
+        .uiverse-spinner div { position: absolute; width: 100%; height: 100%; border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+        .uiverse-spinner div:nth-child(1) { border: 4px solid #a855f7; border-top-color: transparent; border-bottom-color: transparent; animation-delay: -0.5s; }
+        .uiverse-spinner div:nth-child(2) { border: 4px solid #f43f5e; border-left-color: transparent; border-right-color: transparent; transform: scale(0.8); animation-delay: -1s; }
+        .uiverse-spinner div:nth-child(3) { border: 4px solid #3b82f6; border-top-color: transparent; border-bottom-color: transparent; transform: scale(0.6); animation-delay: -1.5s; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+        /* Custom Cursors */
+        .custom-cursor { position:fixed; top:0; left:0; width:20px; height:20px; border:2px solid rgba(168,85,247,0.6); border-radius:50%; pointer-events:none; z-index:99999; mix-blend-mode: difference; transform: translate(-50%, -50%); transition: width 0.3s, height 0.3s, border-radius 0.3s, background-color 0.3s, border 0.3s; }
+        .cursor-dot { position:fixed; top:0; left:0; width:4px; height:4px; background: #a855f7; border-radius:50%; pointer-events:none; z-index:99999; transform: translate(-50%, -50%); transition: opacity 0.2s; }
+        .custom-cursor.snapping { mix-blend-mode: normal; border-color: transparent; }
+
+        /* UIVERSE: Animated Gradient Border Button */
+        .btn-uiverse {
+            position: relative;
+            background: #0f172a; /* Dark background */
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+            overflow: hidden;
+            display: inline-flex; align-items: center; gap: 8px; font-weight: 600;
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .btn-uiverse::before {
+            content: "";
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 12px; padding: 2px;
+            background: linear-gradient(45deg, #a855f7, #f43f5e, #3b82f6, #a855f7);
+            background-size: 400%;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: border-spin 4s linear infinite;
+            z-index: -1;
+        }
+        .btn-uiverse:hover { transform: translateY(-4px); box-shadow: 0 10px 20px -5px rgba(168,85,247,0.4); }
+        .light-mode .btn-uiverse { background: #ffffff; color: #0f172a; }
+        
+        /* UIVERSE: Floating Label Input */
+        .input-uiverse-group { position: relative; width: 100%; margin-bottom: 1.5rem; }
+        .input-uiverse { 
+            width: 100%; padding: 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; 
+            background: rgba(255,255,255,0.02); color: white; outline: none; transition: 0.3s; font-size: 15px; 
+        }
+        .input-uiverse:focus { border-color: #a855f7; box-shadow: 0 0 0 4px rgba(168,85,247,0.1); background: rgba(0,0,0,0.2); }
+        .label-uiverse { 
+            position: absolute; left: 16px; top: 16px; color: #94a3b8; pointer-events: none; 
+            transition: 0.3s cubic-bezier(0.4,0,0.2,1); font-size: 15px; background: transparent; padding: 0 4px;
+        }
+        .input-uiverse:focus ~ .label-uiverse, .input-uiverse:not(:placeholder-shown) ~ .label-uiverse { 
+            transform: translateY(-26px) translateX(-5px) scale(0.85); color: #a855f7; background: #0f172a; border-radius: 4px; 
+        }
+        .light-mode .input-uiverse { background: rgba(0,0,0,0.03); color: #0f172a; border-color: rgba(0,0,0,0.1); }
+        .light-mode .input-uiverse:focus ~ .label-uiverse, .light-mode .input-uiverse:not(:placeholder-shown) ~ .label-uiverse { background: #ffffff; }
+
+        /* UIVERSE: Magic Card (Glowing Rotating Border) */
+        .card-uiverse { position: relative; background: rgba(255,255,255,0.02); border-radius: 24px; overflow: hidden; }
+        .card-uiverse::before {
+            content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: conic-gradient(transparent, rgba(168,85,247,0.5), transparent 30%);
+            animation: rotate 4s linear infinite; z-index: 0; opacity: 0; transition: opacity 0.3s ease;
+        }
+        .card-uiverse:hover::before { opacity: 1; }
+        .card-uiverse-content { position: relative; z-index: 1; background: #0f172a; margin: 1px; border-radius: 23px; height: calc(100% - 2px); transition: background 0.3s ease; }
+        .light-mode .card-uiverse-content { background: #ffffff; }
+        @keyframes rotate { 100% { transform: rotate(360deg); } }
+
+        /* UIVERSE: Theme Toggle Switch */
+        .theme-switch { --toggle-size: 15px; position: relative; display: inline-block; width: 3.2em; height: 1.6em; }
+        .theme-switch input { opacity: 0; width: 0; height: 0; }
+        .theme-slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255,255,0.1); transition: .4s; border-radius: 30px; border: 1px solid rgba(255,255,255,0.2); }
+        .theme-slider:before { position: absolute; content: ""; height: 1.2em; width: 1.2em; border-radius: 20px; left: 0.2em; bottom: 0.15em; background-color: #f5f5f5; transition: .4s cubic-bezier(0.23,1,0.32,1); }
+        .theme-switch input:checked + .theme-slider { background-color: rgba(0,0,0,0.5); }
+        .theme-switch input:checked + .theme-slider:before { transform: translateX(1.5em); background-color: #a855f7; box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb; }
+        .light-mode .theme-slider { background-color: rgba(0,0,0,0.1); border-color: rgba(0,0,0,0.2); }
+
+        /* UIVERSE: Animated Checkbox */
+        .uiverse-checkbox-wrapper { cursor: pointer; display: flex; align-items: center; gap: 10px; position: relative; }
+        .uiverse-checkbox { appearance: none; width: 20px; height: 20px; border: 2px solid #5c7cfa; border-radius: 6px; background: transparent; transition: all 0.3s ease; display: grid; place-content: center; outline: none; cursor: pointer; }
+        .uiverse-checkbox::before { content: ""; width: 10px; height: 10px; transform: scale(0); transition: 120ms transform ease-in-out; box-shadow: inset 1em 1em white; background-color: white; transform-origin: center; clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%); }
+        .uiverse-checkbox:checked { background: #5c7cfa; border-color: #5c7cfa; }
+        .uiverse-checkbox:checked::before { transform: scale(1); }
+
+        /* UIVERSE: Tooltips */
+        .tooltip-container { position: relative; display: inline-flex; }
+        .tooltip-container .uiverse-tooltip {
+            position: absolute; top: -35px; left: 50%; transform: translateX(-50%) scale(0.8);
+            background: #a855f7; color: white; padding: 4px 10px; border-radius: 6px;
+            font-size: 11px; font-weight: 600; opacity: 0; visibility: hidden; transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            white-space: nowrap; pointer-events: none; z-index: 100;
+        }
+        .tooltip-container:hover .uiverse-tooltip { opacity: 1; visibility: visible; transform: translateX(-50%) scale(1); }
+        .uiverse-tooltip::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border-width: 4px; border-style: solid; border-color: #a855f7 transparent transparent transparent; }
+
+        /* UIVERSE: Background Pattern */
+        .pattern-uiverse {
+            background-color: #0f172a;
+            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .light-mode .pattern-uiverse { background-color: #f8fafc; background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px); }
+
+        .glass { background: rgba(15,23,42,0.65); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease; }
+        .availability-badge { animation: pulseGlow 2s ease-in-out infinite; }
+        @keyframes pulseGlow { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.4);} 50%{box-shadow:0 0 0 8px rgba(34,197,94,0);} }
+        .float { animation: floatUp 6s ease-in-out infinite; }
+        .float-delay-1 { animation-delay: -2s; }
+        .float-delay-2 { animation-delay: -4s; }
+        @keyframes floatUp { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-15px);} }
+
+        #three-canvas { position:absolute; inset:0; z-index:20; pointer-events:none; transition: filter 0.5s ease; }
+
+        .transition-slice { position: fixed; top: 0; bottom: 0; width: 25.1%; background: #020617; z-index: 100000; transform: scaleY(0); pointer-events: none; }
+        .slice-1 { left: 0%; transform-origin: top; }
+        .slice-2 { left: 25%; transform-origin: bottom; }
+        .slice-3 { left: 50%; transform-origin: top; }
+        .slice-4 { left: 75%; transform-origin: bottom; }
+        
+        .lang-dropdown { opacity:0; visibility:hidden; transform:translateY(10px); transition: all 0.3s ease; }
+        .lang-container:hover .lang-dropdown, .lang-container:focus-within .lang-dropdown { opacity:1; visibility:visible; transform:translateY(0); }
+        .mega-menu { opacity:0; visibility:hidden; transform:translateY(10px); transition: all 0.3s ease; pointer-events:none; }
+        .nav-item:hover .mega-menu, .nav-item:focus-within .mega-menu { opacity:1; visibility:visible; transform:translateY(0); pointer-events:all; }
+        .nav-link { position:relative; }
+        .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background: linear-gradient(90deg,#a855f7,#f43f5e); transition: width 0.3s ease; }
+        .nav-link.active::after { width:100%; }
+        .navbar-hide { transform: translateY(-100%); }
+        .navbar-show { transform: translateY(0); }
+
+        .command-palette, .blog-modal, .preview-modal { position:fixed; inset:0; z-index:99999; display:none; align-items:center; justify-content:center; padding:1rem; }
+        .command-palette.active, .blog-modal.active, .preview-modal.active { display:flex; }
+        .cmd-item.active { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+        .modal-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); }
+        .modal-content { position:relative; width:100%; max-width:800px; max-height:85vh; overflow-y:auto; background:#0f172a; border-radius:24px; border:1px solid rgba(255,255,255,0.1); transform:translateY(20px); opacity:0; transition:all 0.4s cubic-bezier(0.23,1,0.32,1); }
+        .blog-modal.active .modal-content, .preview-modal.active .modal-content { transform:translateY(0); opacity:1; }
+        .modal-content::-webkit-scrollbar { width:4px; }
+        .modal-content::-webkit-scrollbar-thumb { background:rgba(168,85,247,0.3); border-radius:2px; }
+        .page-view { display: none; min-height: 100vh; padding-top: 80px; }
+        .page-view.active { display: block; }
+        .landing-content.hidden { display: none; }
+
+        .toast { position:fixed; bottom:2rem; left:50%; transform:translateX(-50%) translateY(100px); z-index:100002; background:#10b981; color:white; padding:1rem 1.5rem; border-radius:12px; font-size:0.875rem; font-weight:500; display:flex; align-items:center; gap:0.5rem; opacity:0; transition: all 0.4s cubic-bezier(0.23,1,0.32,1); box-shadow:0 10px 40px rgba(16,185,129,0.3); }
+        .toast.show { transform:translateX(-50%) translateY(0); opacity:1; }
+        .typewriter-cursor { animation: blink 1s step-end infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .social-icon { transition: all 0.3s cubic-bezier(0.23,1,0.32,1); color: #fff; display: flex; align-items: center; justify-content: center; }
+        .social-icon.facebook:hover { background: #1877F2; border-color: #1877F2; transform: translateY(-4px) scale(1.1); box-shadow: 0 10px 20px -5px rgba(24,119,242,0.5); }
+        .social-icon.instagram:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-color: transparent; transform: translateY(-4px) scale(1.1); box-shadow: 0 10px 20px -5px rgba(225,48,108,0.5); }
+        .social-icon.tiktok:hover { background: #000000; border-color: #000000; transform: translateY(-4px) scale(1.1); box-shadow: 0 10px 20px -5px rgba(255,0,80,0.5); }
+        .social-icon.youtube:hover { background: #FF0000; border-color: #FF0000; transform: translateY(-4px) scale(1.1); box-shadow: 0 10px 20px -5px rgba(255,0,0,0.5); }
+        .social-icon.telegram:hover { background: #0088cc; border-color: #0088cc; transform: translateY(-4px) scale(1.1); box-shadow: 0 10px 20px -5px rgba(0,136,204,0.5); }
+
+        .marquee-mask { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+        @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { display: flex; width: max-content; animation: marquee 30s linear infinite; }
+        .animate-marquee:hover { animation-play-state: paused; }
+        .mouse-scroll { width: 26px; height: 40px; border: 2px solid rgba(255,255,255,0.4); border-radius: 20px; position: relative; display: flex; justify-content: center; }
+        .mouse-scroll::before { content: ''; width: 4px; height: 8px; background: #a855f7; border-radius: 2px; position: absolute; top: 6px; animation: scrollWheel 1.5s infinite; }
+        @keyframes scrollWheel { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(12px); opacity: 0; } }
+        
+        /* Light Mode Specific Overrides */
+        body.light-mode { background-color: #f1f5f9; color: #0f172a; }
+        .light-mode .text-white { color: #0f172a !important; }
+        .light-mode .text-gray-300 { color: #334155 !important; }
+        .light-mode .text-gray-400 { color: #475569 !important; }
+        .light-mode .text-gray-500 { color: #64748b !important; }
+        .light-mode .bg-dark-950, .light-mode .bg-dark-900 { background-color: #f1f5f9 !important; }
+        .light-mode .glass { background: rgba(255,255,255,0.85) !important; border-color: rgba(0,0,0,0.1) !important; box-shadow: 0 4px 30px rgba(0,0,0,0.05); }
+        .light-mode .border-white\/10, .light-mode .border-white\/5 { border-color: rgba(0,0,0,0.1) !important; }
+        .light-mode .bg-white\/5 { background-color: rgba(0,0,0,0.03) !important; }
+        .light-mode .bg-white\/10 { background-color: rgba(0,0,0,0.06) !important; }
+        .light-mode .hover\:bg-white\/5:hover { background-color: rgba(0,0,0,0.06) !important; }
+        .light-mode .modal-content, .light-mode .command-palette .glass { background: #ffffff !important; border-color: rgba(0,0,0,0.1) !important; }
+        .light-mode .project-overlay { background: rgba(255,255,255,0.85) !important; }
+        .light-mode .project-overlay a { background: #0f172a !important; color: #fff !important; }
+        .light-mode #three-canvas { filter: invert(1) opacity(0.3); }
+        .light-mode .toast { color: #fff !important; }
+        .light-mode .mouse-scroll { border-color: rgba(0,0,0,0.3); }
+        .light-mode .bg-gradient-to-r, .light-mode .bg-gradient-to-b { -webkit-text-fill-color: transparent; }
+        .light-mode select option { background: #ffffff; color: #0f172a; }
+
+        .hamburger span { display:block; width:24px; height:2px; background:currentColor; transition: all 0.3s ease; transform-origin: left; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity:0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg); }
+        
+        .hero-carousel-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 2s ease-in-out; }
+        .hero-carousel-bg.active { opacity: 1; }
+    </style>
+</head>
+<body class="bg-dark-950 text-white overflow-x-hidden antialiased">
+
+    <div id="preloader" class="fixed inset-0 bg-dark-950 flex flex-col items-center justify-center">
+        <!-- Uiverse Preloader -->
+        <div class="uiverse-spinner mb-8">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="text-xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-rose-400 animate-pulse">RR PORTFOLIO</div>
+    </div>
+
+    <div class="custom-cursor hidden lg:block" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-dot hidden lg:block" id="cursorDot" aria-hidden="true"></div>
+    <div class="scroll-progress fixed top-0 left-0 h-[3px] bg-gradient-to-r from-accent-500 to-rose-500 z-[99998] transition-all duration-100" id="scrollProgress" style="width:0%" role="progressbar"></div>
+
+    <div class="transition-slice slice-1" id="slice1"></div>
+    <div class="transition-slice slice-2" id="slice2"></div>
+    <div class="transition-slice slice-3" id="slice3"></div>
+    <div class="transition-slice slice-4" id="slice4"></div>
+
+    <div class="toast" id="toast" role="alert"><span id="toastIconWrapper"><i data-lucide="check-circle" class="w-5 h-5"></i></span><span id="toastMessage">Success!</span></div>
+
+    <!-- Animated WhatsApp Widget (Bottom Left) -->
+    <a href="https://wa.me/94716789615" target="_blank" rel="noopener noreferrer" class="sound-hover fixed bottom-8 left-8 z-[9000] w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/40 hover:scale-110 transition-transform duration-300 tooltip-container" aria-label="Chat on WhatsApp">
+        <span class="absolute inset-0 rounded-full border-2 border-[#25D366] animate-ping opacity-75"></span>
+        <svg class="w-7 h-7 fill-current relative z-10 text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        <span class="uiverse-tooltip">Chat on WhatsApp</span>
+    </a>
+
+    <div class="command-palette" id="commandPalette" role="dialog" aria-modal="true" aria-label="Search commands">
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm" id="commandOverlay"></div>
+        <div class="relative z-10 w-full max-w-2xl mx-4">
+            <div class="glass rounded-2xl p-2 shadow-2xl">
+                <div class="flex items-center gap-3 px-4 py-3 border-b border-white/10">
+                    <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
+                    <input type="text" placeholder="Search commands..." class="w-full bg-transparent text-white placeholder-gray-500 outline-none text-lg" id="commandInput" autocomplete="off">
+                    <kbd class="px-2 py-1 text-xs bg-white/10 rounded-md text-gray-400 font-mono">ESC</kbd>
+                </div>
+                <div class="p-2 max-h-[60vh] overflow-y-auto" id="commandResults">
+                    <div class="px-4 py-2 text-xs text-gray-500 uppercase tracking-wider" data-i18n="cmdNavigation">Navigation</div>
+                    <button class="sound-hover cmd-item w-full text-left px-4 py-3 rounded-xl hover:bg-white/5 border border-transparent transition-colors flex items-center gap-3" data-section="hero"><div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center"><i data-lucide="home" class="w-4 h-4 text-primary-400"></i></div><span class="text-sm" data-i18n="navHome">Home</span></button>
+                    <button class="sound-hover cmd-item w-full text-left px-4 py-3 rounded-xl hover:bg-white/5 border border-transparent transition-colors flex items-center gap-3" data-section="about"><div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center"><i data-lucide="user" class="w-4 h-4 text-accent-400"></i></div><span class="text-sm" data-i18n="navAbout">About Me</span></button>
+                    <button class="sound-hover cmd-item w-full text-left px-4 py-3 rounded-xl hover:bg-white/5 border border-transparent transition-colors flex items-center gap-3" data-section="portfolio" data-type="page"><div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center"><i data-lucide="folder" class="w-4 h-4 text-green-400"></i></div><span class="text-sm" data-i18n="navPortfolio">Portfolio</span></button>
+                    <button class="sound-hover cmd-item w-full text-left px-4 py-3 rounded-xl hover:bg-white/5 border border-transparent transition-colors flex items-center gap-3" data-section="contact"><div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center"><i data-lucide="mail" class="w-4 h-4 text-orange-400"></i></div><span class="text-sm" data-i18n="navContact">Contact</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="fixed top-0 left-0 right-0 z-[9980] transition-all duration-300 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Brand Logo -->
+                <a href="#" onclick="navigateTo('home'); return false;" class="flex items-center gap-2 group sound-hover" aria-label="Home">
+                    <img src="/assets/logo.png" alt="Rihana Raseem Logo" class="h-9 w-auto object-contain group-hover:scale-110 transition-transform drop-shadow-lg" onerror="this.src='https://placehold.co/100x40/a855f7/ffffff?text=RR'">
+                </a>
+
+                <div class="hidden lg:flex items-center gap-1">
+                    <button class="nav-link px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors sound-hover" onclick="navigateTo('home', 'about')"><span data-i18n="navAbout">About</span></button>
+                    
+                    <div class="nav-item relative">
+                        <button class="nav-link px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-1 sound-hover">
+                            <span data-i18n="navServices">Services</span> <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                        </button>
+                        <div class="mega-menu absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[680px] glass rounded-2xl p-6 shadow-2xl border border-white/10" role="menu">
+                            <div class="grid grid-cols-3 gap-4">
+                                <button class="mega-menu-item flex items-start gap-3 p-4 rounded-xl transition-all sound-hover text-left" onclick="navigateTo('home', 'poem-writing')"><div class="w-10 h-10 rounded-lg bg-gradient-to-br from-rose-500 to-pink-400 flex items-center justify-center flex-shrink-0"><i data-lucide="feather" class="w-5 h-5 text-white"></i></div><div><h4 class="font-semibold text-sm" data-i18n="srvPoem">Poem Writing</h4><p class="text-xs text-gray-400 mt-1" data-i18n="srvPoemD">Custom poetry</p></div></button>
+                                <button class="mega-menu-item flex items-start gap-3 p-4 rounded-xl transition-all sound-hover text-left" onclick="navigateTo('home', 'voiceover')"><div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-violet-400 flex items-center justify-center flex-shrink-0"><i data-lucide="mic" class="w-5 h-5 text-white"></i></div><div><h4 class="font-semibold text-sm" data-i18n="srvVoiceover">Voiceover</h4><p class="text-xs text-gray-400 mt-1" data-i18n="srvVoiceD">Professional audio</p></div></button>
+                                <button class="mega-menu-item flex items-start gap-3 p-4 rounded-xl transition-all sound-hover text-left" onclick="navigateTo('home', 'script')"><div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center flex-shrink-0"><i data-lucide="file-text" class="w-5 h-5 text-white"></i></div><div><h4 class="font-semibold text-sm" data-i18n="srvScript">Script Prepare</h4><p class="text-xs text-gray-400 mt-1" data-i18n="srvScriptD">Screenplays</p></div></button>
+                                <button class="mega-menu-item flex items-start gap-3 p-4 rounded-xl transition-all sound-hover text-left" onclick="navigateTo('home', 'software')"><div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-400 flex items-center justify-center flex-shrink-0"><i data-lucide="code" class="w-5 h-5 text-white"></i></div><div><h4 class="font-semibold text-sm" data-i18n="srvSoftware">Software Dev</h4><p class="text-xs text-gray-400 mt-1" data-i18n="srvSoftD">Web & apps</p></div></button>
+                                <button class="mega-menu-item flex items-start gap-3 p-4 rounded-xl transition-all sound-hover text-left" onclick="navigateTo('home', 'books-design')"><div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-orange-400 flex items-center justify-center flex-shrink-0"><i data-lucide="book-open" class="w-5 h-5 text-white"></i></div><div><h4 class="font-semibold text-sm" data-i18n="srvBookDesign">Books Design</h4><p class="text-xs text-gray-400 mt-1" data-i18n="srvBookDD">Cover & layout</p></div></button>
+                                <button class="mega-menu-item flex items-start gap-3 p-4 rounded-xl transition-all sound-hover text-left" onclick="navigateTo('home', 'graphics')"><div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-rose-400 flex items-center justify-center flex-shrink-0"><i data-lucide="palette" class="w-5 h-5 text-white"></i></div><div><h4 class="font-semibold text-sm" data-i18n="srvGraphics">Graphics Design</h4><p class="text-xs text-gray-400 mt-1" data-i18n="srvGraphD">Logos & branding</p></div></button>
+                                <button class="mega-menu-item flex items-start gap-3 p-4 rounded-xl transition-all col-span-1 sound-hover text-left" onclick="navigateTo('home', 'publishing')"><div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-blue-400 flex items-center justify-center flex-shrink-0"><i data-lucide="book" class="w-5 h-5 text-white"></i></div><div><h4 class="font-semibold text-sm" data-i18n="srvPublishing">Book Publishing</h4><p class="text-xs text-gray-400 mt-1" data-i18n="srvPubD">Full distribution</p></div></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="nav-link px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors sound-hover" onclick="navigateTo('portfolio')"><span data-i18n="navPortfolio">Portfolio</span></button>
+                    <button class="nav-link px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors sound-hover" onclick="navigateTo('books')"><span data-i18n="navBooks">Books</span></button>
+                    <button class="nav-link px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors sound-hover" onclick="navigateTo('home', 'experience')"><span data-i18n="navExperience">Experience</span></button>
+                    <button class="nav-link px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors sound-hover" onclick="navigateTo('blog')"><span data-i18n="navBlog">Blog</span></button>
+                    <button class="nav-link px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors sound-hover" onclick="navigateTo('home', 'contact')"><span data-i18n="navContact">Contact</span></button>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="lang-container relative z-[9990]">
+                        <button class="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors text-xs font-semibold sound-hover" id="currentLangBtn">EN</button>
+                        <div class="lang-dropdown absolute top-full right-0 mt-2 w-24 bg-dark-900 border border-white/10 rounded-xl overflow-hidden shadow-xl">
+                            <button onclick="setLanguage('en')" class="w-full text-left px-4 py-2 text-sm hover:bg-white/5 transition-colors sound-hover">English</button>
+                            <button onclick="setLanguage('si')" class="w-full text-left px-4 py-2 text-sm hover:bg-white/5 transition-colors sound-hover">සිංහල</button>
+                            <button onclick="setLanguage('ta')" class="w-full text-left px-4 py-2 text-sm hover:bg-white/5 transition-colors sound-hover">தமிழ்</button>
+                        </div>
+                    </div>
+                    
+                    <!-- UIVERSE Theme Toggle -->
+                    <label class="theme-switch tooltip-container">
+                        <input type="checkbox" id="themeCheckbox" onchange="toggleTheme()">
+                        <span class="theme-slider"></span>
+                        <span class="uiverse-tooltip">Toggle Theme</span>
+                    </label>
+
+                    <button onclick="openCommandPalette()" class="hidden sm:flex w-9 h-9 rounded-xl bg-white/5 hover:bg-white/10 items-center justify-center transition-colors sound-hover tooltip-container" aria-label="Search">
+                        <i data-lucide="search" class="w-4 h-4"></i>
+                        <span class="uiverse-tooltip">Search Cmd+K</span>
+                    </button>
+                    
+                    <!-- UIVERSE Button -->
+                    <button class="btn-uiverse sound-hover hidden lg:inline-flex" onclick="navigateTo('home', 'contact')">
+                        <span data-i18n="btnQuote">Get a Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                    
+                    <button class="hamburger lg:hidden flex flex-col gap-1.5 p-2 sound-hover" onclick="toggleMobileMenu()" aria-label="Menu" id="hamburgerBtn">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="fixed inset-0 z-[9970] bg-dark-950/98 backdrop-blur-xl lg:hidden translate-x-full transition-transform duration-500" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <div class="flex flex-col h-full p-6 pt-24">
+            <button class="text-2xl font-semibold py-4 border-b border-white/5 text-left sound-hover text-gray-300 hover:text-white transition-colors" onclick="navigateTo('home', 'about')"><span data-i18n="navAbout">About</span></button>
+            <button class="text-2xl font-semibold py-4 border-b border-white/5 text-left sound-hover text-gray-300 hover:text-white transition-colors" onclick="navigateTo('portfolio')"><span data-i18n="navPortfolio">Portfolio</span></button>
+            <button class="text-2xl font-semibold py-4 border-b border-white/5 text-left sound-hover text-gray-300 hover:text-white transition-colors" onclick="navigateTo('books')"><span data-i18n="navBooks">Books</span></button>
+            <button class="text-2xl font-semibold py-4 border-b border-white/5 text-left sound-hover text-gray-300 hover:text-white transition-colors" onclick="navigateTo('home', 'experience')"><span data-i18n="navExperience">Experience</span></button>
+            <button class="text-2xl font-semibold py-4 border-b border-white/5 text-left sound-hover text-gray-300 hover:text-white transition-colors" onclick="navigateTo('blog')"><span data-i18n="navBlog">Blog</span></button>
+            <button class="text-2xl font-semibold py-4 border-b border-white/5 text-left sound-hover text-gray-300 hover:text-white transition-colors" onclick="navigateTo('home', 'contact')"><span data-i18n="navContact">Contact</span></button>
+            
+            <div class="mt-auto flex items-center gap-4">
+                <a href="https://facebook.com/rihanaraseem" target="_blank" rel="noopener noreferrer" class="social-icon facebook sound-hover w-12 h-12 rounded-full border border-white/10 bg-white/5">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                </a>
+                <a href="https://instagram.com/rihanaraseem" target="_blank" rel="noopener noreferrer" class="social-icon instagram sound-hover w-12 h-12 rounded-full border border-white/10 bg-white/5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://tiktok.com/@rihanaraseem" target="_blank" rel="noopener noreferrer" class="social-icon tiktok sound-hover w-12 h-12 rounded-full border border-white/10 bg-white/5">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.01.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <div id="landingContent" class="landing-content">
+            
+            <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black" aria-label="Hero">
+                <!-- Premium 5-Slide Background Carousel -->
+                <div id="hero-carousel" class="absolute inset-0 z-0">
+                    <div class="hero-carousel-bg active" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');"></div>
+                    <div class="hero-carousel-bg" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?q=80&w=2073&auto=format&fit=crop');"></div>
+                    <div class="hero-carousel-bg" style="background-image: url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2000&auto=format&fit=crop');"></div>
+                    <div class="hero-carousel-bg" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop');"></div>
+                    <div class="hero-carousel-bg" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2000&auto=format&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-dark-950/85 z-10 backdrop-blur-[2px]"></div>
+                </div>
+
+                <canvas id="three-canvas"></canvas>
+
+                <div class="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 pb-16 w-full flex flex-col items-center">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 float">
+                        <span class="w-2 h-2 rounded-full bg-green-400 availability-badge"></span>
+                        <span class="text-sm font-medium text-gray-300" data-i18n="heroAvailable">Available for creative projects</span>
+                    </div>
+
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight leading-[0.9] mb-6">
+                        <div class="overflow-hidden pb-2"><span id="heroName" class="inline-block bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400" data-i18n="heroName">Rihana Raseem</span></div>
+                    </h1>
+
+                    <div class="flex items-center justify-center gap-3 text-xl sm:text-2xl text-gray-400 mb-10 flex-wrap min-h-[40px]">
+                        <span data-i18n="heroTitle">Creative Technologist</span>
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-accent-600/20 to-rose-600/20 border border-accent/20 text-accent-300 font-medium shadow-lg shadow-accent/10">
+                            <i data-lucide="feather" class="w-5 h-5"></i>
+                            <span id="rotatingText"></span><span class="typewriter-cursor">|</span>
+                        </span>
+                    </div>
+
+                    <p class="max-w-2xl mx-auto text-gray-400 text-lg mb-12 leading-relaxed px-4" data-i18n="heroDesc">
+                        Crafting exceptional experiences through words, code, and design.
+                        From poetry to software — I bring creative visions to life.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                        <!-- UIVERSE Button -->
+                        <button class="btn-uiverse sound-hover" onclick="navigateTo('portfolio')">
+                            <span data-i18n="btnViewWork">View My Work</span> <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                        <button class="magnetic-btn sound-hover group inline-flex items-center gap-3 px-8 py-4 glass rounded-2xl text-lg font-medium hover:bg-white/10 transition-all hover:-translate-y-1" onclick="navigateTo('home', 'contact')">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i> <span data-i18n="btnQuote2">Get a Quote</span>
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-col items-center justify-center opacity-50 hover:opacity-100 transition-opacity mt-8 cursor-pointer" onclick="navigateTo('home', 'about')">
+                        <div class="mouse-scroll mb-2"></div>
+                        <span class="text-xs uppercase tracking-widest text-gray-500 font-semibold" data-i18n="scrollDown">Scroll Down</span>
+                    </div>
+                </div>
+                
+                <div class="w-full absolute bottom-0 border-y border-white/5 py-3 glass bg-dark-950/70 z-30 overflow-hidden marquee-mask hidden sm:block">
+                    <div class="animate-marquee gap-8 items-center flex">
+                        <div class="flex gap-12 items-center px-6" id="marquee-content-1"></div>
+                        <div class="flex gap-12 items-center px-6" id="marquee-content-2"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="relative py-24 lg:py-32" aria-label="About">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20">
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent-400 text-sm font-medium mb-4"><i data-lucide="user" class="w-4 h-4"></i> <span data-i18n="navAbout">About Me</span></span>
+                        <h2 class="text-4xl sm:text-5xl font-bold mb-4" data-i18n="aboutTitle">Who I Am</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto" data-i18n="aboutSubtitle">A creative mind bridging the worlds of literature, design, and technology.</p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div class="relative group">
+                            <div class="absolute -inset-4 bg-gradient-to-r from-accent-600/20 to-rose-600/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+                            <div class="relative rounded-3xl overflow-hidden aspect-[4/5] border border-white/10">
+                                <img src="/assets/rih.jpeg" alt="Rihana Raseem" class="w-full h-full object-cover img-reveal" loading="lazy" onerror="this.src='https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/16dca4dff-0f18-4678-adf3-ca587516f499.png'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-950/30 via-transparent to-transparent" aria-hidden="true"></div>
+                            </div>
+                            <div class="absolute -right-4 top-8 glass rounded-2xl p-4 float float-delay-1"><div class="text-2xl font-bold text-accent-400">7+</div><div class="text-xs text-gray-400" data-i18n="statYears">Years Exp.</div></div>
+                            <div class="absolute -left-4 bottom-16 glass rounded-2xl p-4 float float-delay-2"><div class="text-2xl font-bold text-rose-400">40+</div><div class="text-xs text-gray-400" data-i18n="statProjects">Projects</div></div>
+                        </div>
+
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-3xl lg:text-4xl font-bold mb-4"><span data-i18n="aboutH3Pre">A creative who speaks in</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-rose-400" data-i18n="aboutH3Span">words & code</span></h3>
+                                <p class="text-gray-400 leading-relaxed mb-4 text-lg" data-i18n="aboutDesc1">I'm Rihana Raseem, a creator who thrives at the intersection of language, performance, and narrative. With expertise spanning poetry, voiceover artistry, script writing, and book publishing, I bring a unique, melodic approach to every project I touch.</p>
+                                <p class="text-gray-400 leading-relaxed text-lg" data-i18n="aboutDesc2">Whether I am weaving emotions into a heartfelt poem, breathing life into a script through voice, or designing the visual identity for a new book, my goal remains constant: to craft work that resonates, inspires, and leaves a lasting impact on its audience.</p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="glass-card rounded-2xl p-4 hover:border-accent/30 transition-colors"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center"><i data-lucide="map-pin" class="w-4 h-4 text-accent-400"></i></div><span class="text-sm font-medium text-gray-300" data-i18n="locLabel">Location</span></div><p class="text-gray-400 text-sm" data-i18n="locValue">Kekirawa, Sri Lanka</p></div>
+                                <div class="glass-card rounded-2xl p-4 hover:border-rose/30 transition-colors"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-rose/10 flex items-center justify-center"><i data-lucide="graduation-cap" class="w-4 h-4 text-rose-400"></i></div><span class="text-sm font-medium text-gray-300" data-i18n="eduLabel">Education</span></div><p class="text-gray-400 text-sm" data-i18n="eduValue">M.S. Creative Arts & CS</p></div>
+                                <div class="glass-card rounded-2xl p-4 hover:border-green-500/30 transition-colors"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center"><i data-lucide="languages" class="w-4 h-4 text-green-400"></i></div><span class="text-sm font-medium text-gray-300" data-i18n="langLabel">Languages</span></div><p class="text-gray-400 text-sm" data-i18n="langValue">EN, SI, TA</p></div>
+                                <div class="glass-card rounded-2xl p-4 hover:border-amber-500/30 transition-colors"><div class="flex items-center gap-3 mb-2"><div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center"><i data-lucide="coffee" class="w-4 h-4 text-amber-400"></i></div><span class="text-sm font-medium text-gray-300" data-i18n="funLabel">Fun Fact</span></div><p class="text-gray-400 text-sm" data-i18n="funValue">Published Poet & Author</p></div>
+                            </div>
+
+                            <!-- UIVERSE Button -->
+                            <button class="btn-uiverse sound-hover">
+                                <i data-lucide="download" class="w-4 h-4"></i> <span data-i18n="btnResume">Download Resume</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UIVERSE Pattern Background added here -->
+            <section id="services" class="relative py-24 lg:py-32 bg-dark-900/50 pattern-uiverse" aria-label="Services">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-sm font-medium mb-4"><i data-lucide="sparkles" class="w-4 h-4"></i> <span data-i18n="navServices">Premium Services</span></span>
+                        <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-white" data-i18n="servicesTitle">What I Offer</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto" data-i18n="servicesSubtitle">Premium creative & technical services tailored to your unique vision. All pricing is custom — based on your specific requirements.</p>
+                    </div>
+
+                    <!-- 1. Poem Writing with UIVERSE Card -->
+                    <div id="poem-writing" class="mb-20 scroll-mt-24">
+                        <div class="service-card card-uiverse group hover:border-rose-500/30">
+                            <div class="card-uiverse-content p-8 lg:p-12">
+                                <div class="grid lg:grid-cols-3 gap-8 items-start">
+                                    <div class="lg:col-span-1">
+                                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                            <i data-lucide="feather" class="w-8 h-8 text-white"></i>
+                                        </div>
+                                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="srvPoem">Poem Writing</h3>
+                                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="poemDesc">Custom poetry crafted with emotion, rhythm, and artistic precision. From love poems to spoken word, every piece is a unique creation.</p>
+                                    </div>
+                                    <div class="lg:col-span-2">
+                                        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-rose-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="heart" class="w-4 h-4 text-rose-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="pF1T">Love & Romance</h4><p class="text-xs text-gray-500" data-i18n="pF1D">Heartfelt verses</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-rose-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="mic" class="w-4 h-4 text-rose-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="pF2T">Spoken Word</h4><p class="text-xs text-gray-500" data-i18n="pF2D">Performance-ready</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-rose-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="calendar" class="w-4 h-4 text-rose-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="pF3T">Occasion Poems</h4><p class="text-xs text-gray-500" data-i18n="pF3D">Birthdays & weddings</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-rose-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="book-open" class="w-4 h-4 text-rose-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="pF4T">Collections</h4><p class="text-xs text-gray-500" data-i18n="pF4D">Book-length compilations</p></div></div>
+                                        </div>
+
+                                        <div class="border border-rose-500/20 rounded-2xl p-6 bg-rose-500/[0.02]">
+                                            <h4 class="font-bold text-lg mb-4 flex items-center gap-2 text-white"><i data-lucide="send" class="w-5 h-5 text-rose-400"></i> <span data-i18n="reqPoem">Request a Poem</span></h4>
+                                            <form class="space-y-4 web3form" action="https://api.web3forms.com/submit" method="POST">
+                                                <input type="hidden" name="subject" value="New Poem Request">
+                                                <input type="hidden" name="service_type" value="Poem Writing">
+                                                
+                                                <!-- UIVERSE Inputs -->
+                                                <div class="grid sm:grid-cols-2 gap-4">
+                                                    <div class="input-uiverse-group !mb-0">
+                                                        <input type="text" name="name" required class="input-uiverse" placeholder=" ">
+                                                        <label class="label-uiverse" data-i18n="formName">Your name</label>
+                                                    </div>
+                                                    <div class="input-uiverse-group !mb-0">
+                                                        <input type="email" name="email" required class="input-uiverse" placeholder=" ">
+                                                        <label class="label-uiverse" data-i18n="formEmail">your@email.com</label>
+                                                    </div>
+                                                </div>
+                                                <div class="input-uiverse-group">
+                                                    <textarea name="message" rows="3" required class="input-uiverse resize-none" placeholder=" "></textarea>
+                                                    <label class="label-uiverse" data-i18n="formMsg">Describe what you want the poem to convey...</label>
+                                                </div>
+                                                
+                                                <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                                                    <div class="flex items-center gap-2"><span class="text-xs text-gray-500">Pricing:</span><span class="text-sm font-medium text-rose-400">Custom</span></div>
+                                                    <!-- UIVERSE Button -->
+                                                    <button type="submit" class="btn-uiverse sound-hover !px-6 !py-2.5 !text-sm"><span data-i18n="formBtn">Submit Request</span><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Voiceover Service -->
+                    <div id="voiceover" class="mb-20 scroll-mt-24">
+                        <div class="service-card card-uiverse group hover:border-purple-500/30">
+                            <div class="card-uiverse-content p-8 lg:p-12 relative overflow-hidden">
+                                <div class="absolute -right-20 -top-20 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-purple-500/20 transition-colors duration-700"></div>
+                                <div class="grid lg:grid-cols-3 gap-8 items-start relative z-10">
+                                    <div class="lg:col-span-1">
+                                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-violet-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i data-lucide="mic" class="w-8 h-8 text-white"></i></div>
+                                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="srvVoiceover">Voiceover & Audio</h3>
+                                        <p class="text-gray-400 text-sm leading-relaxed mb-6" data-i18n="voDesc">Professional voice recording with crystal-clear quality. Experience the interactive audio demo below.</p>
+                                        
+                                        <div class="bg-dark-950/50 border border-white/10 rounded-xl p-4 mt-6 backdrop-blur-md">
+                                            <p class="text-xs text-gray-500 font-medium mb-3 uppercase tracking-wider" data-i18n="voDemo">Live Audio Demo</p>
+                                            <div class="flex items-center gap-4">
+                                                <button id="playAudioBtn" class="magnetic-btn sound-hover w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0 hover:bg-purple-500 transition-colors shadow-lg shadow-purple-500/20" aria-label="Play Demo">
+                                                    <i data-lucide="play" class="w-5 h-5 ml-1 text-white" id="playIcon"></i>
+                                                </button>
+                                                <canvas id="audioVisualizer" class="flex-1 h-12 rounded opacity-80"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="lg:col-span-2">
+                                        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="radio" class="w-4 h-4 text-purple-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="vF1T">Commercial Voiceover</h4><p class="text-xs text-gray-500" data-i18n="vF1D">TV, radio & digital ads</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="book" class="w-4 h-4 text-purple-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="vF2T">Audiobook Narration</h4><p class="text-xs text-gray-500" data-i18n="vF2D">Full-length recordings</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="film" class="w-4 h-4 text-purple-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="vF3T">Documentary</h4><p class="text-xs text-gray-500" data-i18n="vF3D">Professional storytelling</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="gamepad-2" class="w-4 h-4 text-purple-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="vF4T">Character Voices</h4><p class="text-xs text-gray-500" data-i18n="vF4D">Animation & games</p></div></div>
+                                        </div>
+
+                                        <div class="border border-purple-500/20 rounded-2xl p-6 bg-purple-500/[0.02]">
+                                            <h4 class="font-bold text-lg mb-4 flex items-center gap-2 text-white"><i data-lucide="send" class="w-5 h-5 text-purple-400"></i> <span data-i18n="reqVO">Request a Voiceover</span></h4>
+                                            <form class="space-y-4 web3form" action="https://api.web3forms.com/submit" method="POST">
+                                                <input type="hidden" name="subject" value="New Voiceover Request">
+                                                <input type="hidden" name="service_type" value="Voiceover">
+                                                
+                                                <!-- UIVERSE Inputs -->
+                                                <div class="grid sm:grid-cols-2 gap-4">
+                                                    <div class="input-uiverse-group !mb-0">
+                                                        <input type="text" name="name" required class="input-uiverse" placeholder=" ">
+                                                        <label class="label-uiverse" data-i18n="formName">Your name</label>
+                                                    </div>
+                                                    <div class="input-uiverse-group !mb-0">
+                                                        <input type="email" name="email" required class="input-uiverse" placeholder=" ">
+                                                        <label class="label-uiverse" data-i18n="formEmail">your@email.com</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="grid sm:grid-cols-2 gap-4">
+                                                    <select name="vo_type" required class="input-uiverse !text-gray-400 !bg-transparent">
+                                                        <option value="" class="bg-dark-900">Select Voiceover Type *</option>
+                                                        <option value="commercial" class="bg-dark-900">Commercial / Ad</option>
+                                                        <option value="audiobook" class="bg-dark-900">Audiobook</option>
+                                                        <option value="documentary" class="bg-dark-900">Documentary</option>
+                                                    </select>
+                                                    <select name="duration" class="input-uiverse !text-gray-400 !bg-transparent">
+                                                        <option value="" class="bg-dark-900">Estimated Duration</option>
+                                                        <option value="15s" class="bg-dark-900">Under 15 seconds</option>
+                                                        <option value="30s" class="bg-dark-900">15-30 seconds</option>
+                                                        <option value="1m" class="bg-dark-900">30s - 1 minute</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="grid sm:grid-cols-2 gap-4">
+                                                    <select name="tone" class="input-uiverse !text-gray-400 !bg-transparent">
+                                                        <option value="" class="bg-dark-900">Select Tone / Style</option>
+                                                        <option value="professional" class="bg-dark-900">Professional</option>
+                                                        <option value="friendly" class="bg-dark-900">Friendly</option>
+                                                        <option value="energetic" class="bg-dark-900">Energetic</option>
+                                                    </select>
+                                                    <select name="language" required class="input-uiverse !text-gray-400 !bg-transparent">
+                                                        <option value="" class="bg-dark-900">Select Language *</option>
+                                                        <option value="english" class="bg-dark-900">English</option>
+                                                        <option value="sinhala" class="bg-dark-900">Sinhala</option>
+                                                        <option value="tamil" class="bg-dark-900">Tamil</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="input-uiverse-group !mb-0">
+                                                    <textarea name="message" rows="3" required class="input-uiverse resize-none" placeholder=" "></textarea>
+                                                    <label class="label-uiverse" data-i18n="formMsg">Project Description & Requirements...</label>
+                                                </div>
+                                                
+                                                <div>
+                                                    <p class="text-xs text-gray-500 mb-2">Upload script to Google Drive and paste link:</p>
+                                                    <input type="url" name="file_link" placeholder="Paste sharing link here..." class="input-uiverse">
+                                                </div>
+
+                                                <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                                                    <div class="flex items-center gap-2"><span class="text-xs text-gray-500">Pricing:</span><span class="text-sm font-medium text-purple-400">Custom</span></div>
+                                                    <button type="submit" class="btn-uiverse sound-hover !px-6 !py-2.5 !text-sm"><span data-i18n="formBtn">Submit Request</span><i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Script Prepare -->
+                    <div id="script" class="mb-20 scroll-mt-24">
+                        <div class="service-card card-uiverse group hover:border-blue-500/30">
+                            <div class="card-uiverse-content p-8 lg:p-12">
+                                <div class="grid lg:grid-cols-3 gap-8 items-center">
+                                    <div class="lg:col-span-1">
+                                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i data-lucide="file-text" class="w-8 h-8 text-white"></i></div>
+                                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="srvScript">Script Prepare</h3>
+                                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="scDesc">Compelling scripts for film, television, YouTube, podcasts, and stage. Every script is crafted with structure, pacing, and audience engagement in mind.</p>
+                                    </div>
+                                    <div class="lg:col-span-2">
+                                        <div class="grid sm:grid-cols-2 gap-4">
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="video" class="w-4 h-4 text-blue-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="sF1T">Film & TV Scripts</h4><p class="text-xs text-gray-500" data-i18n="sF1D">Feature films & shorts</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="youtube" class="w-4 h-4 text-blue-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="sF2T">YouTube Scripts</h4><p class="text-xs text-gray-500" data-i18n="sF2D">Video content scripts</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="headphones" class="w-4 h-4 text-blue-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="sF3T">Podcast Scripts</h4><p class="text-xs text-gray-500" data-i18n="sF3D">Show formats & outlines</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="theater" class="w-4 h-4 text-blue-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="sF4T">Stage Play Scripts</h4><p class="text-xs text-gray-500" data-i18n="sF4D">Theater & performance</p></div></div>
+                                        </div>
+                                        <div class="mt-6 pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
+                                            <div class="flex items-center gap-2"><span class="text-xs text-gray-500">Pricing:</span><span class="text-sm font-medium text-blue-400">Custom</span></div>
+                                            <button onclick="navigateTo('home', 'contact')" class="sound-hover inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600/20 border border-blue-500/30 rounded-xl text-sm font-medium text-blue-300 hover:bg-blue-600/30 transition-all"><span data-i18n="btnQuoteReq">Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Software Development -->
+                    <div id="software" class="mb-20 scroll-mt-24">
+                        <div class="service-card card-uiverse group hover:border-green-500/30">
+                            <div class="card-uiverse-content p-8 lg:p-12">
+                                <div class="grid lg:grid-cols-3 gap-8 items-center">
+                                    <div class="lg:col-span-1">
+                                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i data-lucide="code" class="w-8 h-8 text-white"></i></div>
+                                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="srvSoftware">Software Development</h3>
+                                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="swDesc">Custom web applications, mobile apps, and digital platforms built with modern technology. Scalable, secure, and beautifully engineered.</p>
+                                    </div>
+                                    <div class="lg:col-span-2">
+                                        <div class="grid sm:grid-cols-2 gap-4">
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-green-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="globe" class="w-4 h-4 text-green-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="swF1T">Web Applications</h4><p class="text-xs text-gray-500" data-i18n="swF1D">React, Next.js, full-stack</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-green-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="smartphone" class="w-4 h-4 text-green-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="swF2T">Mobile Apps</h4><p class="text-xs text-gray-500" data-i18n="swF2D">iOS & Android</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-green-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="shopping-cart" class="w-4 h-4 text-green-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="swF3T">E-Commerce</h4><p class="text-xs text-gray-500" data-i18n="swF3D">Custom online stores</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-green-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="cloud" class="w-4 h-4 text-green-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="swF4T">Cloud & APIs</h4><p class="text-xs text-gray-500" data-i18n="swF4D">AWS, GCP, microservices</p></div></div>
+                                        </div>
+                                        <div class="mt-6 pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
+                                            <div class="flex items-center gap-2"><span class="text-xs text-gray-500">Pricing:</span><span class="text-sm font-medium text-green-400">Custom</span></div>
+                                            <button onclick="navigateTo('home', 'contact')" class="sound-hover inline-flex items-center gap-2 px-5 py-2.5 bg-green-600/20 border border-green-500/30 rounded-xl text-sm font-medium text-green-300 hover:bg-green-600/30 transition-all"><span data-i18n="btnQuoteReq">Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Books Design -->
+                    <div id="books-design" class="mb-20 scroll-mt-24">
+                        <div class="service-card card-uiverse group hover:border-amber-500/30">
+                            <div class="card-uiverse-content p-8 lg:p-12">
+                                <div class="grid lg:grid-cols-3 gap-8 items-center">
+                                    <div class="lg:col-span-1">
+                                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i data-lucide="book-open" class="w-8 h-8 text-white"></i></div>
+                                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="srvBookDesign">Books Design</h3>
+                                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="bdDesc">Professional book cover design and interior layout. From fiction to non-fiction, creating visual identities that captivate readers.</p>
+                                    </div>
+                                    <div class="lg:col-span-2">
+                                        <div class="grid sm:grid-cols-2 gap-4">
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-amber-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="image" class="w-4 h-4 text-amber-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="bF1T">Cover Design</h4><p class="text-xs text-gray-500" data-i18n="bF1D">Front & back covers</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-amber-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="layout" class="w-4 h-4 text-amber-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="bF2T">Interior Layout</h4><p class="text-xs text-gray-500" data-i18n="bF2D">Typography & design</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-amber-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="type" class="w-4 h-4 text-amber-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="bF3T">Typography</h4><p class="text-xs text-gray-500" data-i18n="bF3D">Custom font styling</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-amber-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="printer" class="w-4 h-4 text-amber-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="bF4T">Print-Ready Files</h4><p class="text-xs text-gray-500" data-i18n="bF4D">Professional preparation</p></div></div>
+                                        </div>
+                                        <div class="mt-6 pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
+                                            <div class="flex items-center gap-2"><span class="text-xs text-gray-500">Pricing:</span><span class="text-sm font-medium text-amber-400">Custom</span></div>
+                                            <button onclick="navigateTo('home', 'contact')" class="sound-hover inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600/20 border border-amber-500/30 rounded-xl text-sm font-medium text-amber-300 hover:bg-amber-600/30 transition-all"><span data-i18n="btnQuoteReq">Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Graphics Design -->
+                    <div id="graphics" class="mb-20 scroll-mt-24">
+                        <div class="service-card card-uiverse group hover:border-pink-500/30">
+                            <div class="card-uiverse-content p-8 lg:p-12">
+                                <div class="grid lg:grid-cols-3 gap-8 items-center">
+                                    <div class="lg:col-span-1">
+                                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i data-lucide="palette" class="w-8 h-8 text-white"></i></div>
+                                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="srvGraphics">Graphics Design</h3>
+                                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="gdDesc">Stunning visual designs that communicate your brand story. Logos, branding, social media graphics, and complete visual identity systems.</p>
+                                    </div>
+                                    <div class="lg:col-span-2">
+                                        <div class="grid sm:grid-cols-2 gap-4">
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-pink-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="pen-tool" class="w-4 h-4 text-pink-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="gF1T">Logo & Branding</h4><p class="text-xs text-gray-500" data-i18n="gF1D">Complete identity</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-pink-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="share-2" class="w-4 h-4 text-pink-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="gF2T">Social Graphics</h4><p class="text-xs text-gray-500" data-i18n="gF2D">Posts & banners</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-pink-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="presentation" class="w-4 h-4 text-pink-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="gF3T">Presentations</h4><p class="text-xs text-gray-500" data-i18n="gF3D">Pitch decks</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-pink-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="package" class="w-4 h-4 text-pink-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="gF4T">Packaging Design</h4><p class="text-xs text-gray-500" data-i18n="gF4D">Labels & boxes</p></div></div>
+                                        </div>
+                                        <div class="mt-6 pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
+                                            <div class="flex items-center gap-2"><span class="text-xs text-gray-500">Pricing:</span><span class="text-sm font-medium text-pink-400">Custom</span></div>
+                                            <button onclick="navigateTo('home', 'contact')" class="sound-hover inline-flex items-center gap-2 px-5 py-2.5 bg-pink-600/20 border border-pink-500/30 rounded-xl text-sm font-medium text-pink-300 hover:bg-pink-600/30 transition-all"><span data-i18n="btnQuoteReq">Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Book Publishing -->
+                    <div id="publishing" class="scroll-mt-24">
+                        <div class="service-card card-uiverse group hover:border-indigo-500/30">
+                            <div class="card-uiverse-content p-8 lg:p-12">
+                                <div class="grid lg:grid-cols-3 gap-8 items-center">
+                                    <div class="lg:col-span-1">
+                                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i data-lucide="book" class="w-8 h-8 text-white"></i></div>
+                                        <h3 class="text-2xl font-bold mb-3 text-white" data-i18n="srvPublishing">Book Publishing</h3>
+                                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="pbDesc">End-to-end book publishing solutions. From manuscript to market — I handle editing, design, formatting, ISBN, and distribution.</p>
+                                    </div>
+                                    <div class="lg:col-span-2">
+                                        <div class="grid sm:grid-cols-2 gap-4">
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-indigo-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="edit" class="w-4 h-4 text-indigo-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="pF1T">Editing</h4><p class="text-xs text-gray-500" data-i18n="pF1D">Professional editing</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-indigo-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="file-plus" class="w-4 h-4 text-indigo-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="pF2T">Formatting</h4><p class="text-xs text-gray-500" data-i18n="pF2D">Print & eBook</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-indigo-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="bar-code" class="w-4 h-4 text-indigo-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="pF3T">ISBN & Metadata</h4><p class="text-xs text-gray-500" data-i18n="pF3D">Catalog setup</p></div></div>
+                                            <div class="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-indigo-500/20 transition-colors"><div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center flex-shrink-0 mt-0.5"><i data-lucide="globe" class="w-4 h-4 text-indigo-400"></i></div><div><h4 class="font-medium text-sm mb-1 text-white" data-i18n="pF4T">Distribution</h4><p class="text-xs text-gray-500" data-i18n="pF4D">Amazon & more</p></div></div>
+                                        </div>
+                                        <div class="mt-6 pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
+                                            <div class="flex items-center gap-2"><span class="text-xs text-gray-500">Pricing:</span><span class="text-sm font-medium text-indigo-400">Custom</span></div>
+                                            <button onclick="navigateTo('home', 'contact')" class="sound-hover inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600/20 border border-indigo-500/30 rounded-xl text-sm font-medium text-indigo-300 hover:bg-indigo-600/30 transition-all"><span data-i18n="btnQuoteReq">Request Quote</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="relative py-24 lg:py-32 bg-dark-950" aria-label="Experience">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-4"><i data-lucide="briefcase" class="w-4 h-4"></i> <span data-i18n="navExperience">Experience</span></span>
+                        <h2 class="text-4xl sm:text-5xl font-bold mb-4" data-i18n="expTitle">Career Journey</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto" data-i18n="expSubtitle">My professional path through creative and technical fields.</p>
+                    </div>
+
+                    <div class="relative max-w-3xl mx-auto">
+                        <div class="timeline-line absolute left-[24px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-accent-500/50 via-rose-500/50 to-transparent" aria-hidden="true"></div>
+                        <div class="relative pl-16 pb-16 timeline-item"><div class="absolute left-[15px] top-2 w-5 h-5 rounded-full bg-accent-600 border-4 border-dark-950 z-10"></div><div class="glass-card rounded-2xl p-6 hover:border-accent/30 transition-colors"><div class="flex flex-wrap items-center gap-3 mb-3"><span class="px-3 py-1 rounded-full bg-accent/10 text-accent-400 text-xs font-medium">2022 — Present</span><span class="text-xs text-gray-500" data-i18n="fullTime">Full-time</span></div><h3 class="text-xl font-bold mb-1" data-i18n="exp1Role">Creative Technologist</h3><p class="text-accent-400 text-sm font-medium mb-3" data-i18n="exp1Comp">Independent — Sri Lanka & Remote</p><p class="text-gray-400 text-sm leading-relaxed mb-4" data-i18n="exp1Desc">Providing comprehensive creative services including poetry, voiceover, script writing, software development, and book publishing for clients worldwide.</p><div class="flex flex-wrap gap-2"><span class="px-2 py-1 rounded bg-white/5 text-xs text-gray-400">Poetry</span><span class="px-2 py-1 rounded bg-white/5 text-xs text-gray-400">Voiceover</span><span class="px-2 py-1 rounded bg-white/5 text-xs text-gray-400">React</span><span class="px-2 py-1 rounded bg-white/5 text-xs text-gray-400">Publishing</span></div></div></div>
+                        <div class="relative pl-16 pb-16 timeline-item"><div class="absolute left-[15px] top-2 w-5 h-5 rounded-full bg-rose-600 border-4 border-dark-950 z-10"></div><div class="glass-card rounded-2xl p-6 hover:border-rose/30 transition-colors"><div class="flex flex-wrap items-center gap-3 mb-3"><span class="px-3 py-1 rounded-full bg-rose/10 text-rose-400 text-xs font-medium">2020 — 2022</span><span class="text-xs text-gray-500" data-i18n="fullTime">Full-time</span></div><h3 class="text-xl font-bold mb-1" data-i18n="exp2Role">Senior Software Developer</h3><p class="text-rose-400 text-sm font-medium mb-3" data-i18n="exp2Comp">Tech Solutions Inc. — Colombo</p><p class="text-gray-400 text-sm leading-relaxed mb-4" data-i18n="exp2Desc">Led development of enterprise web applications. Implemented CI/CD pipelines and mentored junior developers.</p><div class="flex flex-wrap gap-2"><span class="px-2 py-1 rounded bg-white/5 text-xs text-gray-400">Next.js</span><span class="px-2 py-1 rounded bg-white/5 text-xs text-gray-400">Node.js</span><span class="px-2 py-1 rounded bg-white/5 text-xs text-gray-400">AWS</span></div></div></div>
+                        <div class="relative pl-16 timeline-item"><div class="absolute left-[15px] top-2 w-5 h-5 rounded-full bg-green-600 border-4 border-dark-950 z-10"></div><div class="glass-card rounded-2xl p-6 hover:border-green-500/30 transition-colors"><div class="flex flex-wrap items-center gap-3 mb-3"><span class="px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-medium">2018 — 2020</span><span class="text-xs text-gray-500" data-i18n="freelance">Freelance</span></div><h3 class="text-xl font-bold mb-1" data-i18n="exp3Role">Freelance Creative & Developer</h3><p class="text-green-400 text-sm font-medium mb-3" data-i18n="exp3Comp">Various Clients — Global</p><p class="text-gray-400 text-sm leading-relaxed mb-4" data-i18n="exp3Desc">Delivered 30+ projects spanning web development, poetry writing, voiceover, and book design.</p><div class="flex flex-wrap gap-2"><span class="px-2 py-1 rounded bg-white/5 text-xs text-gray-400">Poetry</span><span class="px-2 py-1 rounded bg-white/5 text-xs text-gray-400">Design</span></div></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="relative py-24 lg:py-32 pattern-uiverse" aria-label="Contact">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-sm font-medium mb-4"><i data-lucide="mail" class="w-4 h-4"></i> <span data-i18n="navContact">Get In Touch</span></span>
+                        <h2 class="text-4xl sm:text-5xl font-bold mb-4" data-i18n="contactTitle">Let's Create Together</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto" data-i18n="contactSubtitle">Have a project in mind? Let's bring your creative vision to life.</p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-5 gap-12">
+                        <!-- Contact Info (Left) -->
+                        <div class="lg:col-span-2 space-y-8">
+                            <div>
+                                <h3 class="text-xl font-bold mb-6" data-i18n="contactInfo">Contact Information</h3>
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center flex-shrink-0"><i data-lucide="mail" class="w-5 h-5 text-purple-400"></i></div>
+                                        <div>
+                                            <p class="text-sm text-gray-500 mb-1" data-i18n="contactEmail">Email</p>
+                                            <a href="mailto:rr.ariyaasanam@gmail.com" class="text-sm font-medium text-white hover:text-purple-400 transition-colors">rr.ariyaasanam@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center flex-shrink-0"><i data-lucide="phone" class="w-5 h-5 text-rose-400"></i></div>
+                                        <div>
+                                            <p class="text-sm text-gray-500 mb-1" data-i18n="contactPhone">Phone</p>
+                                            <a href="tel:+94716789615" class="block text-sm font-medium text-white hover:text-rose-400 transition-colors">+94 71 678 9615</a>
+                                            <a href="tel:+94757992302" class="block text-sm font-medium text-white hover:text-rose-400 transition-colors mt-1">+94 75 799 2302</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-green-400"></i></div>
+                                        <div>
+                                            <p class="text-sm text-gray-500 mb-1" data-i18n="contactAddress">Address</p>
+                                            <p class="text-sm font-medium text-white leading-relaxed">No 25, Pahalagama 02,<br>Maha Elagamuwa,<br>Kekirawa, Sri Lanka</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="glass-card rounded-2xl p-6 border border-white/5 bg-white/[0.02]">
+                                <div class="flex items-center gap-3 mb-3"><div class="w-3 h-3 rounded-full bg-green-400 availability-badge"></div><span class="font-medium text-white" data-i18n="navAvailable">Currently Available</span></div>
+                                <p class="text-sm text-gray-400">Open to creative projects and collaborations worldwide. Typical response time: within 24 hours.</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form (Right) -->
+                        <div class="lg:col-span-3">
+                            <form class="glass-card rounded-2xl p-8 web3form bg-white/[0.02] border-white/5" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="subject" value="New Contact Form Submission">
+                                <input type="hidden" name="from_name" value="Rihana Raseem Portfolio">
+                                
+                                <div class="grid sm:grid-cols-2 gap-6 mb-2">
+                                    <div class="input-uiverse-group">
+                                        <input type="text" id="name" name="name" required class="input-uiverse" placeholder=" ">
+                                        <label class="label-uiverse" for="name" data-i18n="formName">Full Name *</label>
+                                    </div>
+                                    <div class="input-uiverse-group">
+                                        <input type="email" id="email" name="email" required class="input-uiverse" placeholder=" ">
+                                        <label class="label-uiverse" for="email" data-i18n="formEmail">Email Address *</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="grid sm:grid-cols-2 gap-6 mb-2">
+                                    <div class="input-uiverse-group">
+                                        <input type="tel" id="phoneNum" name="phone" class="input-uiverse" placeholder=" ">
+                                        <label class="label-uiverse" for="phoneNum">Phone Number</label>
+                                    </div>
+                                    <div class="input-uiverse-group">
+                                        <select id="serviceSelect" name="service" required class="input-uiverse !text-gray-400 !bg-transparent">
+                                            <option value="" class="bg-dark-900">Select a service *</option>
+                                            <option value="poem" class="bg-dark-900">Poem Writing</option>
+                                            <option value="voiceover" class="bg-dark-900">Voiceover</option>
+                                            <option value="script" class="bg-dark-900">Script Prepare</option>
+                                            <option value="software" class="bg-dark-900">Software Development</option>
+                                            <option value="books-design" class="bg-dark-900">Books Design</option>
+                                            <option value="graphics" class="bg-dark-900">Graphics Design</option>
+                                            <option value="publishing" class="bg-dark-900">Book Publishing</option>
+                                            <option value="multiple" class="bg-dark-900">Multiple Services</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-uiverse-group">
+                                    <textarea id="message" name="message" rows="5" required class="input-uiverse resize-none" placeholder=" "></textarea>
+                                    <label class="label-uiverse" for="message" data-i18n="formMsg">Project Details *</label>
+                                </div>
+                                
+                                <!-- UIVERSE Custom Checkbox -->
+                                <label class="uiverse-checkbox-wrapper mb-6">
+                                    <input type="checkbox" required class="uiverse-checkbox" />
+                                    <span class="text-sm text-gray-400">I agree to the privacy policy and terms.</span>
+                                </label>
+                                
+                                <button type="submit" class="btn-uiverse w-full !justify-center !py-4 !text-lg">
+                                    <span data-i18n="formBtn">Send Message</span>
+                                    <i data-lucide="send" class="w-5 h-5"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="page-view" id="portfolioPage">
+            <section class="relative py-24 lg:py-32" aria-label="Portfolio">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl sm:text-5xl font-bold mb-4" data-i18n="portTitle">All Selected Works</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto" data-i18n="portSubtitle">A comprehensive showcase of all my creative and technical projects.</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4 mb-12">
+                        <div class="flex gap-2 flex-wrap">
+                            <button class="sound-hover project-filter2 tab-btn active px-4 py-2 rounded-lg text-sm font-medium bg-accent/10 text-accent-400 border border-accent/20" data-filter="all"><span data-i18n="filterAll">All</span></button>
+                            <button class="sound-hover project-filter2 tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-white/5 text-gray-400 border border-white/10 hover:border-accent/30 transition-all" data-filter="creative"><span data-i18n="filterCreative">Creative</span></button>
+                            <button class="sound-hover project-filter2 tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-white/5 text-gray-400 border border-white/10 hover:border-accent/30 transition-all" data-filter="software"><span data-i18n="filterSoftware">Software</span></button>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid2">
+                        <!-- Card UIVERSE Class Added to all projects -->
+                        <div class="project-card card-uiverse group" data-category="software" data-name="CloudSync Platform">
+                            <div class="card-uiverse-content p-0">
+                                <div class="relative overflow-hidden aspect-[16/10] rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/10765818c-a8ea-4b19-98a8-73fcbb97cf76.png" class="project-img w-full h-full object-cover"></div>
+                                <div class="p-5"><h3 class="text-lg font-bold mb-2">CloudSync Platform</h3><p class="text-gray-400 text-sm mb-4" data-i18n="p1Desc">Cloud-based collaboration platform.</p></div>
+                            </div>
+                        </div>
+                        <div class="project-card card-uiverse group" data-category="creative" data-name="Whispers Collection">
+                            <div class="card-uiverse-content p-0">
+                                <div class="relative overflow-hidden aspect-[16/10] rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/1411de6c6-ba5e-405c-9929-526907235125.png" class="project-img w-full h-full object-cover"></div>
+                                <div class="p-5"><h3 class="text-lg font-bold mb-2">Whispers Collection</h3><p class="text-gray-400 text-sm mb-4" data-i18n="p2Desc">Published poetry collection.</p></div>
+                            </div>
+                        </div>
+                        <div class="project-card card-uiverse group" data-category="software" data-name="Lumière E-Commerce">
+                            <div class="card-uiverse-content p-0">
+                                <div class="relative overflow-hidden aspect-[16/10] rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/1f0f86aee-b541-41c8-85d1-bc9a6ae77678.png" class="project-img w-full h-full object-cover"></div>
+                                <div class="p-5"><h3 class="text-lg font-bold mb-2">Lumière E-Commerce</h3><p class="text-gray-400 text-sm mb-4" data-i18n="p3Desc">Luxury e-commerce platform.</p></div>
+                            </div>
+                        </div>
+                        <div class="project-card card-uiverse group" data-category="creative" data-name="VoiceScape Studio">
+                            <div class="card-uiverse-content p-0">
+                                <div class="relative overflow-hidden aspect-[16/10] rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/1591091c4-919e-4091-a99c-2a368fc11813.png" class="project-img w-full h-full object-cover"></div>
+                                <div class="p-5"><h3 class="text-lg font-bold mb-2">VoiceScape Studio</h3><p class="text-gray-400 text-sm mb-4" data-i18n="p4Desc">Voiceover portfolio.</p></div>
+                            </div>
+                        </div>
+                        <div class="project-card card-uiverse group" data-category="publishing" data-name="Echoes of Dawn">
+                            <div class="card-uiverse-content p-0">
+                                <div class="relative overflow-hidden aspect-[16/10] rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/16dca4dff-0f18-4678-adf3-ca587516f499.png" class="project-img w-full h-full object-cover"></div>
+                                <div class="p-5"><h3 class="text-lg font-bold mb-2">Echoes of Dawn</h3><p class="text-gray-400 text-sm mb-4" data-i18n="p5Desc">Full book publishing project.</p></div>
+                            </div>
+                        </div>
+                        <div class="project-card card-uiverse group" data-category="software" data-name="BrandVault">
+                            <div class="card-uiverse-content p-0">
+                                <div class="relative overflow-hidden aspect-[16/10] rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/15270d4a4-8931-4dd4-8303-f632575d3035.png" class="project-img w-full h-full object-cover"></div>
+                                <div class="p-5"><h3 class="text-lg font-bold mb-2">BrandVault</h3><p class="text-gray-400 text-sm mb-4" data-i18n="p6Desc">Brand management SaaS.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="page-view" id="booksPage">
+            <section class="relative py-24 lg:py-32" aria-label="Published Books">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl sm:text-5xl font-bold mb-4" data-i18n="booksTitle">Authorized Published Books</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto" data-i18n="booksSubtitle">A collection of published books authored and crafted with passion. Available for download and purchase.</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="book-card card-uiverse group">
+                            <div class="card-uiverse-content p-0">
+                                <div class="relative overflow-hidden aspect-[3/4] rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/16dca4dff-0f18-4678-adf3-ca587516f499.png" class="book-img w-full h-full object-cover"></div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Echoes of Dawn</h3>
+                                    <p class="text-gray-400 text-sm mb-4" data-i18n="b1Desc">A captivating collection of poems exploring themes of love, nature, and the human condition.</p>
+                                    <button onclick="downloadBook('Echoes of Dawn')" class="btn-uiverse w-full !justify-center !py-2.5 !text-sm"><i data-lucide="download" class="w-4 h-4"></i> <span data-i18n="btnDownload">Download</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card card-uiverse group">
+                            <div class="card-uiverse-content p-0">
+                                <div class="relative overflow-hidden aspect-[3/4] rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/1411de6c6-ba5e-405c-9929-526907235125.png" class="book-img w-full h-full object-cover"></div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Whispers of the Soul</h3>
+                                    <p class="text-gray-400 text-sm mb-4" data-i18n="b2Desc">An intimate exploration of inner thoughts and spiritual journeys.</p>
+                                    <button onclick="downloadBook('Whispers of the Soul')" class="btn-uiverse w-full !justify-center !py-2.5 !text-sm"><i data-lucide="download" class="w-4 h-4"></i> <span data-i18n="btnDownload">Download</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card card-uiverse group">
+                            <div class="card-uiverse-content p-0">
+                                <div class="relative overflow-hidden aspect-[3/4] rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/1c099858e-8b6f-97bd-9f03-72eb49d0deec.png" class="book-img w-full h-full object-cover"></div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">The Creative Code</h3>
+                                    <p class="text-gray-400 text-sm mb-4" data-i18n="b3Desc">Bridging the gap between creativity and technology.</p>
+                                    <button onclick="downloadBook('The Creative Code')" class="btn-uiverse w-full !justify-center !py-2.5 !text-sm"><i data-lucide="download" class="w-4 h-4"></i> <span data-i18n="btnDownload">Download</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="page-view" id="blogPage">
+            <section class="relative py-24 lg:py-32" aria-label="Blog">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl sm:text-5xl font-bold mb-4" data-i18n="blogTitle">Latest Articles</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto" data-i18n="blogSubtitle">Thoughts on creativity, technology, and the art of storytelling.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <article class="blog-card card-uiverse group flex flex-col cursor-pointer" onclick="openBlogModal(1)">
+                            <div class="card-uiverse-content p-0 flex flex-col h-full">
+                                <div class="aspect-[16/10] overflow-hidden rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/1c099858e-8b6f-97bd-9f03-72eb49d0deec.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform"></div>
+                                <div class="p-5 flex flex-col flex-1"><h3 class="font-bold mb-2 group-hover:text-accent-400 transition-colors" data-i18n="bl1Title">The Art of Poetic Voice</h3><p class="text-gray-400 text-sm mb-4" data-i18n="bl1Desc">Exploring how rhythm and cadence shape the emotional impact of poetry.</p></div>
+                            </div>
+                        </article>
+                        <article class="blog-card card-uiverse group flex flex-col cursor-pointer" onclick="openBlogModal(2)">
+                            <div class="card-uiverse-content p-0 flex flex-col h-full">
+                                <div class="aspect-[16/10] overflow-hidden rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/13c1bd29c-4678-45ba-9092-459a65ab1787.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform"></div>
+                                <div class="p-5 flex flex-col flex-1"><h3 class="font-bold mb-2 group-hover:text-accent-400 transition-colors" data-i18n="bl2Title">Building Scalable Web Apps</h3><p class="text-gray-400 text-sm mb-4" data-i18n="bl2Desc">Modern architecture patterns for scalable web applications.</p></div>
+                            </div>
+                        </article>
+                        <article class="blog-card card-uiverse group flex flex-col cursor-pointer" onclick="openBlogModal(3)">
+                            <div class="card-uiverse-content p-0 flex flex-col h-full">
+                                <div class="aspect-[16/10] overflow-hidden rounded-t-[23px]"><img src="https://image.qwenlm.ai/public_source/8e67ed44-ae32-4f11-9ed2-d1883ca33e54/14a44bd26-5f20-4538-9282-f6352c0d1ebb.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform"></div>
+                                <div class="p-5 flex flex-col flex-1"><h3 class="font-bold mb-2 group-hover:text-accent-400 transition-colors" data-i18n="bl3Title">Self-Publishing Guide</h3><p class="text-gray-400 text-sm mb-4" data-i18n="bl3Desc">A comprehensive guide to independently publishing your book.</p></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="blog-modal" id="blogModal" role="dialog" aria-modal="true" aria-label="Article reader">
+        <div class="modal-backdrop" onclick="closeBlogModal()"></div>
+        <div class="modal-content" id="blogScrollContainer">
+            <div class="sticky top-0 z-20 flex items-center justify-between w-full p-4 glass border-b border-white/10">
+                <button onclick="closeBlogModal()" class="sound-hover flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="btnBack">Back</span></button>
+            </div>
+            <div id="blogModalContent" class="p-6 lg:p-10 text-gray-300 article-content"></div>
+        </div>
+    </div>
+
+    <footer class="relative bg-[#0b0f19] pt-16 pb-8 border-t border-white/5" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Brand & Description -->
+                <div class="md:col-span-2 pr-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="/assets/logo.png" alt="Rihana Raseem Logo" class="h-9 w-auto object-contain drop-shadow-lg" onerror="this.src='https://placehold.co/100x40/a855f7/ffffff?text=RR'">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-md">
+                        Creative Technologist specializing in poetry, voiceover, script writing, software development, book design, graphics design, and publishing.
+                    </p>
+                    
+                    <form class="flex gap-3 max-w-sm web3form mb-8" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="subject" value="New Newsletter Subscription">
+                        <!-- UIVERSE Input -->
+                        <div class="input-uiverse-group !mb-0 flex-1">
+                            <input type="email" name="email" required class="input-uiverse !py-3 !bg-[#141b2d]" placeholder=" ">
+                            <label class="label-uiverse">Enter your email</label>
+                        </div>
+                        <button type="submit" class="btn-uiverse !py-3 !px-6 !rounded-lg text-sm font-semibold whitespace-nowrap shadow-md">Subscribe</button>
+                    </form>
+
+                    <!-- Social Media Icons (Inline SVGs with Tooltips) -->
+                    <div class="flex items-center gap-4">
+                        <a href="https://facebook.com/rihanaraseem" target="_blank" rel="noopener noreferrer" class="social-icon facebook sound-hover w-11 h-11 rounded-full border border-white/10 bg-white/5 shadow-lg tooltip-container">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                            <span class="uiverse-tooltip">Facebook</span>
+                        </a>
+                        <a href="https://instagram.com/rihanaraseem" target="_blank" rel="noopener noreferrer" class="social-icon instagram sound-hover w-11 h-11 rounded-full border border-white/10 bg-white/5 shadow-lg tooltip-container">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            <span class="uiverse-tooltip">Instagram</span>
+                        </a>
+                        <a href="https://tiktok.com/@rihanaraseem" target="_blank" rel="noopener noreferrer" class="social-icon tiktok sound-hover w-11 h-11 rounded-full border border-white/10 bg-white/5 shadow-lg tooltip-container">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.01.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                            <span class="uiverse-tooltip">TikTok</span>
+                        </a>
+                        <a href="https://youtube.com/@rihanaraseem" target="_blank" rel="noopener noreferrer" class="social-icon youtube sound-hover w-11 h-11 rounded-full border border-white/10 bg-white/5 shadow-lg tooltip-container">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            <span class="uiverse-tooltip">YouTube</span>
+                        </a>
+                        <a href="https://t.me/rihanaraseem" target="_blank" rel="noopener noreferrer" class="social-icon telegram sound-hover w-11 h-11 rounded-full border border-white/10 bg-white/5 shadow-lg tooltip-container">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.888-.662 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            <span class="uiverse-tooltip">Telegram</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services Links -->
+                <div>
+                    <h4 class="font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-4">
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'poem-writing')">Poem Writing</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'voiceover')">Voiceover</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'script')">Script Prepare</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'software')">Software Development</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'books-design')">Books Design</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'graphics')">Graphics Design</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'publishing')">Book Publishing</button></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'about')">About</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('portfolio')">Portfolio</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('books')">Published Books</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'experience')">Experience</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('blog')">Blog</button></li>
+                        <li><button class="text-sm text-gray-400 hover:text-white transition-colors" onclick="navigateTo('home', 'contact')">Contact</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-white/5 relative">
+                <p class="text-sm text-gray-500">© 2026 Rihana Raseem. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <p class="text-sm text-gray-500">Crafted by: <a href="https://www.scmc.lk" target="_blank" rel="noopener noreferrer" class="text-[#8b5cf6] hover:text-[#7c3aed] transition-colors font-medium">Sophistic_Creation</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Back to Top Button (Bottom Right) -->
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="fixed bottom-8 right-8 w-12 h-12 rounded-xl bg-[#8b5cf6] flex items-center justify-center hover:bg-[#7c3aed] transition-all z-[9000] shadow-lg text-white opacity-0 pointer-events-none" id="backToTop" aria-label="Back to top">
+            <i data-lucide="chevron-up" class="w-6 h-6"></i>
+        </button>
+    </footer>
+
+    <script>
+        // CONFIG
+        const CONFIG = { WEB3FORMS_ACCESS_KEY: '2d1ea654-e833-47ab-87dc-7c0d5e29ed4b' };
+        lucide.createIcons();
+
+        // 1. Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden-preloader');
+                if(typeof gsap !== 'undefined') gsap.from('#heroName', { y: '100%', duration: 1, ease: 'power3.out', delay: 0.2 });
+            }, 1200); // Give the UIVERSE spinner a moment to shine
+        });
+
+        // 2. Carousel Logic
+        const heroSlides = document.querySelectorAll('.hero-carousel-bg');
+        let currentSlide = 0;
+        if(heroSlides.length > 0) {
+            setInterval(() => {
+                heroSlides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % heroSlides.length;
+                heroSlides[currentSlide].classList.add('active');
+            }, 5000);
+        }
+
+        // 3. Translations (i18n)
+        const translations = {
+            en: { 
+                heroName: "Rihana Raseem", heroTitle: "Creative Technologist", heroAvailable: "Available for creative projects", heroDesc: "Crafting exceptional experiences through words, code, and design. From poetry to software — I bring creative visions to life.", scrollDown: "Scroll Down", btnViewWork: "View My Work", btnQuote2: "Get a Quote", btnQuote: "Get a Quote", btnResume: "Download Resume", btnDownload: "Download", btnPreview: "Preview", btnBack: "Back", navHome: "Home", navAbout: "About", navServices: "Services", navPortfolio: "Portfolio", navBooks: "Published Books", navExperience: "Experience", navBlog: "Blog", navContact: "Contact", navAvailable: "Currently Available", cmdNavigation: "Quick Links", aboutTitle: "Who I Am", aboutSubtitle: "A creative mind bridging the worlds of literature, design, and technology.", aboutH3Pre: "A creative who speaks in", aboutH3Span: "words & code", aboutDesc1: "I'm Rihana Raseem, a creator who thrives at the intersection of language, performance, and narrative. With expertise spanning poetry, voiceover artistry, script writing, and book publishing, I bring a unique, melodic approach to every project I touch.", aboutDesc2: "Whether I am weaving emotions into a heartfelt poem, breathing life into a script through voice, or designing the visual identity for a new book, my goal remains constant: to craft work that resonates, inspires, and leaves a lasting impact on its audience.", locLabel: "Location", locValue: "Kekirawa, Sri Lanka", eduLabel: "Education", eduValue: "M.S. Creative Arts & CS", langLabel: "Languages", langValue: "EN, SI, TA", funLabel: "Fun Fact", funValue: "Published Poet & Author", statProjects: "Projects", statYears: "Years Exp.", servicesTitle: "What I Offer", servicesSubtitle: "Premium creative & technical services tailored to your unique vision. All pricing is custom — based on your specific requirements.", btnQuoteReq: "Request Quote", reqPoem: "Request a Poem", reqVO: "Request a Voiceover", srvPoem: "Poem Writing", srvPoemD: "Custom poetry", poemDesc: "Custom poetry crafted with emotion, rhythm, and artistic precision. From love poems to spoken word, every piece is a unique creation.", pF1T: "Love & Romance", pF1D: "Heartfelt verses", pF2T: "Spoken Word", pF2D: "Performance-ready", pF3T: "Occasion Poems", pF3D: "Birthdays & weddings", pF4T: "Collections", pF4D: "Book-length compilations", srvVoiceover: "Voiceover & Audio", srvVoiceD: "Professional audio", voDesc: "Professional voice recording with crystal-clear quality. Experience the interactive audio demo below.", voDemo: "Live Audio Demo", vF1T: "Commercial Voiceover", vF1D: "TV, radio & digital ads", vF2T: "Audiobook Narration", vF2D: "Full-length recordings", vF3T: "Documentary", vF3D: "Professional storytelling", vF4T: "Character Voices", vF4D: "Animation & games", srvScript: "Script Prepare", srvScriptD: "Screenplays", scDesc: "Compelling scripts for film, television, YouTube, podcasts, and stage. Every script is crafted with structure, pacing, and audience engagement in mind.", sF1T: "Film & TV Scripts", sF1D: "Feature films & shorts", sF2T: "YouTube Scripts", sF2D: "Video content scripts", sF3T: "Podcast Scripts", sF3D: "Show formats & outlines", sF4T: "Stage Play Scripts", sF4D: "Theater & performance", srvSoftware: "Software Development", srvSoftD: "Web & apps", swDesc: "Custom web applications, mobile apps, and digital platforms built with modern technology. Scalable, secure, and beautifully engineered.", swF1T: "Web Applications", swF1D: "React, Next.js, full-stack", swF2T: "Mobile Apps", swF2D: "iOS & Android", swF3T: "E-Commerce", swF3D: "Custom online stores", swF4T: "Cloud & APIs", swF4D: "AWS, GCP, microservices", srvBookDesign: "Books Design", srvBookDD: "Cover & layout", bdDesc: "Professional book cover design and interior layout. From fiction to non-fiction, creating visual identities that captivate readers.", bF1T: "Cover Design", bF1D: "Front & back covers", bF2T: "Interior Layout", bF2D: "Typography & design", bF3T: "Typography", bF3D: "Custom font styling", bF4T: "Print-Ready Files", bF4D: "Professional preparation", srvGraphics: "Graphics Design", srvGraphD: "Logos & branding", gdDesc: "Stunning visual designs that communicate your brand story. Logos, branding, social media graphics, and complete visual identity systems.", gF1T: "Logo & Branding", gF1D: "Complete identity", gF2T: "Social Graphics", gF2D: "Posts & banners", gF3T: "Presentations", gF3D: "Pitch decks", gF4T: "Packaging Design", gF4D: "Labels & boxes", srvPublishing: "Book Publishing", srvPubD: "Full distribution", pbDesc: "End-to-end book publishing solutions. From manuscript to market — I handle editing, design, formatting, ISBN, and distribution.", expTitle: "Career Journey", expSubtitle: "My professional path through creative and technical fields.", fullTime: "Full-time", freelance: "Freelance", exp1Role: "Creative Technologist", exp1Comp: "Independent — Sri Lanka & Remote", exp1Desc: "Providing comprehensive creative services including poetry, voiceover, script writing, software development, and book publishing for clients worldwide.", exp2Role: "Senior Software Developer", exp2Comp: "Tech Solutions Inc. — Colombo", exp2Desc: "Led development of enterprise web applications. Implemented CI/CD pipelines and mentored junior developers.", exp3Role: "Freelance Creative & Developer", exp3Comp: "Various Clients — Global", exp3Desc: "Delivered 30+ projects spanning web development, poetry writing, voiceover, and book design.", contactTitle: "Let's Create Together", contactSubtitle: "Have a project in mind? Let's bring your creative vision to life.", contactInfo: "Contact Information", contactEmail: "Email", contactPhone: "Phone", contactAddress: "Address", formName: "Full Name *", formEmail: "Email Address *", formMsg: "Project Details *", formBtn: "Send Message", portTitle: "All Selected Works", portSubtitle: "A comprehensive showcase of all my creative and technical projects.", filterAll: "All", filterCreative: "Creative", filterSoftware: "Software", p1Desc: "Cloud-based collaboration platform.", p2Desc: "Published poetry collection.", p3Desc: "Luxury e-commerce platform.", p4Desc: "Voiceover portfolio.", p5Desc: "Full book publishing project.", p6Desc: "Brand management SaaS.", booksTitle: "Authorized Published Books", booksSubtitle: "A collection of published books authored and crafted with passion. Available for download and purchase.", b1Desc: "A captivating collection of poems exploring themes of love, nature, and the human condition.", b2Desc: "An intimate exploration of inner thoughts and spiritual journeys.", b3Desc: "Bridging the gap between creativity and technology.", blogTitle: "Latest Articles", blogSubtitle: "Thoughts on creativity, technology, and the art of storytelling.", bl1Title: "The Art of Poetic Voice", bl1Desc: "Exploring how rhythm and cadence shape the emotional impact of poetry.", bl2Title: "Building Scalable Web Apps", bl2Desc: "Modern architecture patterns for scalable web applications.", bl3Title: "Self-Publishing Guide", bl3Desc: "A comprehensive guide to independently publishing your book."
+            },
+            si: { 
+                heroName: "රිහානා රසීම්", heroTitle: "නිර්මාණාත්මක තාක්ෂණවේදිනී", heroAvailable: "නිර්මාණාත්මක ව්‍යාපෘති සඳහා ලබා ගත හැක", heroDesc: "වචන, කේත සහ සැලසුම් හරහා සුවිශේෂී අත්දැකීම් නිර්මාණය කිරීම. කවියේ සිට මෘදුකාංග දක්වා මම ඔබේ දැක්ම ජීවමාන කරමි.", scrollDown: "පහළට යන්න", btnViewWork: "මගේ නිර්මාණ", btnQuote2: "මිල ගණන්", btnQuote: "මිල ගණන්", btnResume: "CV එක බාගන්න", btnDownload: "බාගන්න", btnPreview: "පෙරදසුන", btnBack: "පසුපසට", navHome: "මුල් පිටුව", navAbout: "මා ගැන", navServices: "සේවා", navPortfolio: "නිර්මාණ", navBooks: "ප්‍රකාශිත පොත්", navExperience: "අත්දැකීම්", navBlog: "ලිපි", navContact: "සම්බන්ධ වන්න", navAvailable: "දැනට ලබා ගත හැක", cmdNavigation: "ඉක්මන් සබැඳි", aboutTitle: "මම කවුද", aboutSubtitle: "සාහිත්‍යය, නිර්මාණකරණය සහ තාක්ෂණය යා කරන නිර්මාණාත්මක මනසක්.", aboutH3Pre: "මම කතා කරන්නේ", aboutH3Span: "වචන සහ කේත වලින්", aboutDesc1: "මම රිහානා රසීම්, භාෂාව සහ ආඛ්‍යානය අතර අන්තර්ඡේදනය තුළ සමෘද්ධිමත් වන නිර්මාණකාරියක් වෙමි.", aboutDesc2: "මගේ ඉලක්කය නියතව පවතී: ප්‍රේක්ෂකයාගේ මනසට අනුනාද වන විශිෂ්ට නිර්මාණයක් කිරීම.", locLabel: "ස්ථානය", locValue: "කැකිරාව, ශ්‍රී ලංකා", eduLabel: "අධ්‍යාපනය", eduValue: "M.S. Creative Arts & CS", langLabel: "භාෂා", langValue: "සිංහල, දෙමළ, ඉංග්‍රීසි", funLabel: "සුවිශේෂී", funValue: "ප්‍රකාශිත කවියෙක්", statProjects: "ව්‍යාපෘති", statYears: "වසර", servicesTitle: "මගේ සේවා", servicesSubtitle: "ඔබේ දැක්මට ගැලපෙන උසස් තත්ත්වයේ නිර්මාණාත්මක සහ තාක්ෂණික සේවා.", btnQuoteReq: "මිල ගණන් විමසන්න", reqPoem: "කවියක් ඉල්ලන්න", reqVO: "හඬකැවීමක් ඉල්ලන්න", srvPoem: "කවි නිර්මාණය", srvPoemD: "අභිරුචි කවි", poemDesc: "හැඟීම් සහ කලාත්මක නිරවද්‍යතාවයෙන් නිර්මාණය කරන ලද අභිරුචි කවි.", pF1T: "ආදර කවි", pF1D: "හෘදයාංගම පද", pF2T: "කථන වචන", pF2D: "කාර්ය සාධනය සඳහා", pF3T: "විශේෂ අවස්ථා", pF3D: "උපන්දින සහ මංගල", pF4T: "එකතු කිරීම්", pF4D: "පොත් සම්පාදනය", srvVoiceover: "හඬ කැවීම්", srvVoiceD: "වෘත්තීය හඬ", voDesc: "පැහැදිලි ගුණාත්මක බවකින් යුත් වෘත්තීය හඬ පටිගත කිරීම.", voDemo: "සජීවී ශ්‍රව්‍ය පෙරදසුන", vF1T: "වෙළඳ දැන්වීම්", vF1D: "රූපවාහිනී සහ ගුවන් විදුලි", vF2T: "ශ්‍රව්‍ය පොත්", vF2D: "සම්පූර්ණ පොත්", vF3T: "වාර්තා චිත්‍රපට", vF3D: "වෘත්තීය කතන්දර", vF4T: "චරිත හඬ", vF4D: "සජීවිකරණ සහ ක්‍රීඩා", srvScript: "තිර රචනය", srvScriptD: "කතන්දර", scDesc: "චිත්‍රපට, රූපවාහිනී, යූ ටියුබ් සහ වේදිකාව සඳහා බලගතු පිටපත්.", sF1T: "චිත්‍රපට පිටපත්", sF1D: "චිත්‍රපට සහ කෙටි කතා", sF2T: "යූ ටියුබ්", sF2D: "වීඩියෝ අන්තර්ගත", sF3T: "පොඩ්කාස්ට්", sF3D: "වැඩසටහන් ආකෘති", sF4T: "වේදිකා නාට්‍ය", sF4D: "රංග ශාලාව සඳහා", srvSoftware: "මෘදුකාංග", srvSoftD: "වෙබ් යෙදුම්", swDesc: "නවීන තාක්‍ෂණයෙන් ගොඩනඟන ලද අභිරුචි වෙබ් යෙදුම් සහ ඩිජිටල් වේදිකා.", swF1T: "වෙබ් යෙදුම්", swF1D: "React සහ Next.js", swF2T: "ජංගම යෙදුම්", swF2D: "iOS සහ Android", swF3T: "ඊ-වාණිජ්‍යය", swF3D: "මාර්ගගත වෙළඳසැල්", swF4T: "Cloud & APIs", swF4D: "AWS සහ GCP", srvBookDesign: "පොත් සැලසුම්", srvBookDD: "කවර සහ පිටු", bdDesc: "වෘත්තීය පොත් කවරය සැලසුම් කිරීම සහ අභ්‍යන්තර සැකැස්ම.", bF1T: "කවරය සැලසුම්", bF1D: "ඉදිරිපස සහ පසුපස", bF2T: "අභ්‍යන්තර සැකැස්ම", bF2D: "පිටු නිර්මාණය", bF3T: "යතුරු ලියනය", bF3D: "අකුරු හැඩතල", bF4T: "මුද්‍රණය සඳහා", bF4D: "වෘත්තීය සූදානම", srvGraphics: "ග්‍රැෆික් නිර්මාණ", srvGraphD: "ලාංඡන සහ සන්නාම", gdDesc: "ඔබේ සන්නාම කතාව සන්නිවේදනය කරන සිත් ඇදගන්නාසුළු දෘශ්‍ය නිර්මාණ.", gF1T: "ලාංඡන නිර්මාණය", gF1D: "සම්පූර්ණ අනන්යතාව", gF2T: "සමාජ මාධ්‍ය", gF2D: "පෝස්ට් සහ බැනර්", gF3T: "ඉදිරිපත් කිරීම්", gF3D: "Pitch decks", gF4T: "ඇසුරුම් නිර්මාණය", gF4D: "ලේබල් සහ පෙට්ටි", srvPublishing: "පොත් ප්‍රකාශනය", srvPubD: "සම්පූර්ණ සේවාව", pbDesc: "අත්පිටපතේ සිට වෙළඳපොළ දක්වා සම්පූර්ණ ප්‍රකාශන සේවාව.", expTitle: "වෘත්තීය ගමන", expSubtitle: "නිර්මාණාත්මක සහ තාක්ෂණික ක්ෂේත්‍ර හරහා මගේ වෘත්තීය ගමන.", fullTime: "පූර්ණ කාලීන", freelance: "නිදහස් සේවය", exp1Role: "නිර්මාණාත්මක තාක්ෂණවේදියෙක්", exp1Comp: "ස්වාධීන — ශ්‍රී ලංකාව", exp1Desc: "ලොව පුරා සේවාදායකයින් සඳහා නිර්මාණාත්මක සේවා සැපයීම.", exp2Role: "ජ්‍යෙෂ්ඨ මෘදුකාංග සංවර්ධක", exp2Comp: "ටෙක් සොලියුෂන්ස් — කොළඹ", exp2Desc: "වෙබ් යෙදුම් සංවර්ධනය මෙහෙයවීම.", exp3Role: "නිදහස් නිර්මාණකරු", exp3Comp: "විවිධ සේවාදායකයින් — ගෝලීය", exp3Desc: "ආරම්භක ව්‍යාපාර සඳහා ව්‍යාපෘති 30+ ක් සාර්ථකව නිම කිරීම.", contactTitle: "අපි එක්ව නිර්මාණය කරමු", contactSubtitle: "ඔබට ව්‍යාපෘතියක් තිබේද? අපි ඔබේ දැක්ම ජීවමාන කරමු.", contactInfo: "සම්බන්ධ වීමේ තොරතුරු", contactEmail: "ඊමේල්", contactPhone: "දුරකථන", contactAddress: "ලිපිනය", formName: "සම්පූර්ණ නම *", formEmail: "ඊමේල් ලිපිනය *", formMsg: "ව්‍යාපෘති විස්තර *", formBtn: "යොමු කරන්න", portTitle: "සියලුම නිර්මාණ", portSubtitle: "මගේ නිර්මාණාත්මක සහ තාක්ෂණික ව්‍යාපෘති වල සවිස්තරාත්මක සංදර්ශකයක්.", filterAll: "සියල්ල", filterCreative: "නිර්මාණාත්මක", filterSoftware: "මෘදුකාංග", p1Desc: "වලාකුළු මත පදනම් වූ වේදිකාව.", p2Desc: "ප්‍රකාශිත කාව්‍ය සංග්‍රහය.", p3Desc: "සුඛෝපභෝගී ඊ-වාණිජ්‍යය වේදිකාව.", p4Desc: "වෘත්තීය හඬකැවීම් කළඹ.", p5Desc: "සම්පූර්ණ පොත් ප්‍රකාශන ව්‍යාපෘතිය.", p6Desc: "සන්නාම කළමනාකරණ SaaS.", booksTitle: "ප්‍රකාශිත පොත්", booksSubtitle: "ආශාවෙන් නිර්මාණය කරන ලද ප්‍රකාශිත පොත් එකතුවක්.", b1Desc: "ආදරය, ස්වභාවධර්මය සහ මානව තත්වය යන තේමාවන් ගවේෂණය කරන ආකර්ෂණීය කවි එකතුවක්.", b2Desc: "අභ්‍යන්තර සිතුවිලි සහ අධ්‍යාත්මික චාරිකා පිළිබඳ ගවේෂණයක්.", b3Desc: "නිර්මාණශීලිත්වය සහ තාක්ෂණය අතර පරතරය පියවීම.", blogTitle: "නව ලිපි", blogSubtitle: "නිර්මාණශීලිත්වය, තාක්ෂණය සහ කතන්දර කීමේ කලාව.", bl1Title: "කාව්‍යමය හඬේ කලාව", bl1Desc: "නූතන සාහිත්‍යය තුළ කාව්‍යයේ චිත්තවේගීය බලපෑම.", bl2Title: "පරිමාණය කළ හැකි වෙබ් යෙදුම්", bl2Desc: "වෙබ් යෙදුම් ගොඩනැගීම සඳහා නවීන ගෘහ නිර්මාණ.", bl3Title: "ස්වයං ප්‍රකාශන මාර්ගෝපදේශය", bl3Desc: "ඔබේ පොත ස්වාධීනව ප්‍රකාශයට පත් කිරීම සඳහා මාර්ගෝපදේශය."
+            },
+            ta: { 
+                heroName: "ரிஹானா ரசீம்", heroTitle: "படைப்பு தொழில்நுட்பவியலாளர்", heroAvailable: "படைப்பு திட்டங்களுக்கு கிடைக்கிறது", heroDesc: "வார்த்தைகள், குறியீடுகள் மற்றும் வடிவமைப்பு மூலம் சிறப்பான அனுபவங்களை உருவாக்குதல். கவிதை முதல் மென்பொருள் வரை உங்கள் பார்வையை நனவாக்குகிறேன்.", scrollDown: "கீழே செல்லவும்", btnViewWork: "படைப்புகள்", btnQuote2: "தொடர்பு கொள்க", btnQuote: "தொடர்பு கொள்க", btnResume: "ரெஸ்யூமை பதிவிறக்கவும்", btnDownload: "பதிவிறக்க", btnPreview: "முன்னோட்டம்", btnBack: "பின்புறம்", navHome: "முகப்பு", navAbout: "என்னை பற்றி", navServices: "சேவைகள்", navPortfolio: "படைப்புகள்", navBooks: "புத்தகங்கள்", navExperience: "அனுபவம்", navBlog: "வலைப்பதிவு", navContact: "தொடர்புக்கு", navAvailable: "தற்போது கிடைக்கிறது", cmdNavigation: "விரைவான இணைப்புகள்", aboutTitle: "நான் யார்", aboutSubtitle: "இலக்கியம், வடிவமைப்பு மற்றும் தொழில்நுட்பத்தை இணைக்கும் ஒரு படைப்பு மனம்.", aboutH3Pre: "நான் பேசும் மொழிகள்", aboutH3Span: "வார்த்தைகள் மற்றும் குறியீடுகள்", aboutDesc1: "நான் ரிஹானா ரசீம், மொழி மற்றும் விவரிப்பு ஆகியவற்றின் குறுக்குவெட்டில் செழித்து வளரும் ஒரு படைப்பாளி.", aboutDesc2: "எனது குறிக்கோள் மாறிலியானது: பார்வையாளர்களை எதிரொலிக்கும் மற்றும் ஊக்குவிக்கும் சிறந்த படைப்பை உருவாக்குவது.", locLabel: "இடம்", locValue: "கெகிராவா, இலங்கை", eduLabel: "கல்வி", eduValue: "M.S. Creative Arts & CS", langLabel: "மொழிகள்", langValue: "தமிழ், சிங்களம், ஆங்கிலம்", funLabel: "சிறப்பம்சம்", funValue: "வெளியிடப்பட்ட கவிஞர்", statProjects: "திட்டங்கள்", statYears: "ஆண்டுகள்", servicesTitle: "எனது சேவைகள்", servicesSubtitle: "உங்கள் பார்வைக்கு ஏற்ப பிரீமியம் படைப்பு மற்றும் தொழில்நுட்ப சேவைகள்.", btnQuoteReq: "விலை கோருக", reqPoem: "கவிதை கோரிக்கை", reqVO: "குரல் பதிவு கோரிக்கை", srvPoem: "கவிதை எழுதுதல்", srvPoemD: "தனிப்பயன் கவிதை", poemDesc: "உணர்ச்சி மற்றும் கலை துல்லியத்துடன் வடிவமைக்கப்பட்ட தனிப்பயன் கவிதை.", pF1T: "காதல் கவிதைகள்", pF1D: "இதயப்பூர்வமான வரிகள்", pF2T: "பேசும் வார்த்தை", pF2D: "செயல்திறனுக்கான", pF3T: "சிறப்பு நிகழ்வுகள்", pF3D: "பிறந்தநாள் & திருமணம்", pF4T: "தொகுப்புகள்", pF4D: "புத்தக தொகுப்புகள்", srvVoiceover: "குரல் பதிவு", srvVoiceD: "தொழில்முறை ஆடியோ", voDesc: "தெளிவான தரத்துடன் தொழில்முறை குரல் பதிவு.", voDemo: "நேரடி ஆடியோ முன்னோட்டம்", vF1T: "விளம்பரங்கள்", vF1D: "தொலைக்காட்சி & வானொலி", vF2T: "ஆடியோ புத்தகங்கள்", vF2D: "முழு புத்தகங்கள்", vF3T: "ஆவணப்படம்", vF3D: "தொழில்முறை கதை", vF4T: "கதாபாத்திர குரல்கள்", vF4D: "அனிமேஷன் & விளையாட்டு", srvScript: "திரைக்கதை", srvScriptD: "கதைகள்", scDesc: "திரைப்படம், தொலைக்காட்சி, யூடியூப் மற்றும் மேடைக்கான கட்டாய ஸ்கிரிப்டுகள்.", sF1T: "திரைப்பட ஸ்கிரிப்டுகள்", sF1D: "திரைப்படங்கள் & குறும்படங்கள்", sF2T: "யூடியூப்", sF2D: "வீடியோ உள்ளடக்கம்", sF3T: "பாட்காஸ்ட்", sF3D: "நிகழ்ச்சி வடிவங்கள்", sF4T: "மேடை நாடகங்கள்", sF4D: "நாடக அரங்கம்", srvSoftware: "மென்பொருள்", srvSoftD: "வலை பயன்பாடுகள்", swDesc: "நவீன தொழில்நுட்பத்துடன் கட்டப்பட்ட தனிப்பயன் வலை பயன்பாடுகள்.", swF1T: "வலை பயன்பாடுகள்", swF1D: "React & Next.js", swF2T: "மொபைல் ஆப்ஸ்", swF2D: "iOS & Android", swF3T: "ஈ-காமர்ஸ்", swF3D: "ஆன்லைன் கடைகள்", swF4T: "Cloud & APIs", swF4D: "AWS & GCP", srvBookDesign: "புத்தக வடிவமைப்பு", srvBookDD: "அட்டை & தளவமைப்பு", bdDesc: "தொழில்முறை புத்தக அட்டை வடிவமைப்பு மற்றும் உள்துறை தளவமைப்பு.", bF1T: "அட்டை வடிவமைப்பு", bF1D: "முன் & பின் அட்டைகள்", bF2T: "உள்துறை தளவமைப்பு", bF2D: "பக்க வடிவமைப்பு", bF3T: "அச்சுக்கலை", bF3D: "எழுத்துரு வடிவமைப்பு", bF4T: "அச்சுக்கு தயாராக", bF4D: "தொழில்முறை தயாரிப்பு", srvGraphics: "கிராபிக்ஸ் வடிவமைப்பு", srvGraphD: "லோகோக்கள்", gdDesc: "உங்கள் பிராண்ட் கதையைத் தொடர்புகொள்ளும் அதிர்ச்சியூட்டும் காட்சி வடிவமைப்புகள்.", gF1T: "லோகோ வடிவமைப்பு", gF1D: "முழு அடையாளம்", gF2T: "சமூக ஊடகம்", gF2D: "இடுகைகள் & பேனர்கள்", gF3T: "விளக்கக்காட்சிகள்", gF3D: "Pitch decks", gF4T: "பேக்கேஜிங் வடிவமைப்பு", gF4D: "லேபிள்கள் & பெட்டிகள்", srvPublishing: "புத்தக வெளியீடு", srvPubD: "முழு விநியோகம்", pbDesc: "கையெழுத்துப் பிரதியிலிருந்து சந்தை வரை முழு விநியோகம்.", expTitle: "தொழில் பயணம்", expSubtitle: "படைப்பு மற்றும் தொழில்நுட்ப துறைகளில் எனது தொழில் பயணம்.", fullTime: "முழு நேரம்", freelance: "சுயாதீன வேலை", exp1Role: "படைப்பு தொழில்நுட்பவியலாளர்", exp1Comp: "சுயாதீன — இலங்கை", exp1Desc: "படைப்பு சேவைகளை வழங்குதல்.", exp2Role: "மூத்த மென்பொருள் டெவலப்பர்", exp2Comp: "டெக் சொல்யூஷன்ஸ் — கொழும்பு", exp2Desc: "நிறுவன வலை பயன்பாடுகளின் வளர்ச்சியை வழிநடத்துதல்.", exp3Role: "சுயாதீன படைப்பாளி", exp3Comp: "பல்வேறு வாடிக்கையாளர்கள்", exp3Desc: "30+ திட்டங்களை வெற்றிகரமாக முடித்தல்.", contactTitle: "ஒன்றாக உருவாக்குவோம்", contactSubtitle: "உங்களிடம் ஒரு திட்டம் உள்ளதா? உங்கள் பார்வையை நனவாக்குவோம்.", contactInfo: "தொடர்பு தகவல்", contactEmail: "மின்னஞ்சல்", contactPhone: "தொலைபேசி", contactAddress: "முகவரி", formName: "முழு பெயர் *", formEmail: "மின்னஞ்சல் *", formMsg: "திட்ட விவரங்கள் *", formBtn: "சமர்ப்பிக்கவும்", portTitle: "அனைத்து படைப்புகள்", portSubtitle: "எனது படைப்பு மற்றும் தொழில்நுட்ப திட்டங்களின் விரிவான காட்சி பெட்டி.", filterAll: "அனைத்தும்", filterCreative: "படைப்பு", filterSoftware: "மென்பொருள்", p1Desc: "கிளவுட் அடிப்படையிலான தளம்.", p2Desc: "கவிதைத் தொகுப்பு.", p3Desc: "ஈ-காமர்ஸ் தளம்.", p4Desc: "குரல் பதிவு போர்ட்ஃபோலியோ.", p5Desc: "முழு புத்தக வெளியீட்டுத் திட்டம்.", p6Desc: "பிராண்ட் மேலாண்மை SaaS.", booksTitle: "வெளியிடப்பட்ட புத்தகங்கள்", booksSubtitle: "ஆர்வத்துடன் வடிவமைக்கப்பட்ட புத்தகங்களின் தொகுப்பு.", b1Desc: "காதல், இயற்கை மற்றும் மனித நிலை ஆகியவற்றின் கருப்பொருள்களை ஆராயும் ஒரு கவிதைத் தொகுப்பு.", b2Desc: "உள் எண்ணங்கள் மற்றும் ஆன்மீக பயணங்களின் ஆய்வு.", b3Desc: "படைப்பாற்றல் மற்றும் தொழில்நுட்பத்திற்கு இடையிலான இடைவெளியைக் குறைத்தல்.", blogTitle: "சமீபத்திய கட்டுரைகள்", blogSubtitle: "படைப்பாற்றல், தொழில்நுட்பம் மற்றும் கதைசொல்லல் கலை.", bl1Title: "கவிதை குரலின் கலை", bl1Desc: "கவிதையின் உணர்ச்சிகரமான தாக்கத்தை தாளம் எவ்வாறு வடிவமைக்கிறது.", bl2Title: "அளவிடக்கூடிய வலை பயன்பாடுகள்", bl2Desc: "அளவிடக்கூடிய வலை பயன்பாடுகளை உருவாக்குவதற்கான நவீன கட்டிடக்கலை.", bl3Title: "சுய-வெளியீட்டு வழிகாட்டி", bl3Desc: "உங்கள் புத்தகத்தை வெளியிடுவதற்கான விரிவான வழிகாட்டி."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.getElementById('currentLangBtn').innerText = lang.toUpperCase();
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        // UIVERSE Inputs rely on label, not placeholder
+                        el.placeholder = " "; 
+                    } else {
+                        // Safe replacement preserving icons inside buttons
+                        Array.from(el.childNodes).forEach(node => {
+                            if(node.nodeType === 3 && node.nodeValue.trim() !== '') {
+                                node.nodeValue = translations[lang][key];
+                            } else if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                                el.innerText = translations[lang][key];
+                            }
+                        });
+                        if(el.childNodes.length === 0) el.innerText = translations[lang][key];
+                    }
+                }
+            });
+        }
+
+        // 4. Audio & Lenis Smooth Scroll
+        let audioCtxStarted = false;
+        document.body.addEventListener('click', async () => { if (!audioCtxStarted) { await Tone.start(); audioCtxStarted = true; } }, { once: true });
+        function playTick() { if (audioCtxStarted) new Tone.MembraneSynth({ pitchDecay: 0.01, octave: 5, volume: -30 }).toDestination().triggerAttackRelease("C6", "32n"); }
+        document.querySelectorAll('.sound-hover').forEach(el => el.addEventListener('mouseenter', playTick));
+
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time)=>{ lenis.raf(time * 1000) });
+        gsap.ticker.lagSmoothing(0, 0);
+
+        // 5. Navigation & Modals
+        let isDark = localStorage.getItem('theme') !== 'light';
+        if(!isDark) { document.body.classList.add('light-mode'); document.getElementById('themeCheckbox').checked = true; }
+        function toggleTheme() {
+            isDark = !isDark;
+            document.body.classList.toggle('light-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            playTick();
+        }
+        
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 100) navbar.classList.add('bg-dark-950/80', 'backdrop-blur-md', 'shadow-xl');
+            else navbar.classList.remove('bg-dark-950/80', 'backdrop-blur-md', 'shadow-xl');
+            
+            if(window.scrollY > lastScrollY && window.scrollY > 300) { navbar.classList.add('navbar-hide'); navbar.classList.remove('navbar-show'); }
+            else { navbar.classList.add('navbar-show'); navbar.classList.remove('navbar-hide'); }
+            
+            const backToTopBtn = document.getElementById('backToTop');
+            if(window.scrollY > 500) { backToTopBtn.classList.remove('opacity-0', 'pointer-events-none'); backToTopBtn.classList.add('opacity-100', 'pointer-events-auto'); }
+            else { backToTopBtn.classList.add('opacity-0', 'pointer-events-none'); backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto'); }
+            
+            lastScrollY = window.scrollY;
+            
+            const scrollProgress = document.getElementById('scrollProgress');
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            scrollProgress.style.width = (window.scrollY / docHeight * 100) + '%';
+        });
+
+        function navigateTo(pageId, sectionId = null) {
+            playTick();
+            closeMobileMenu();
+            closeCommandPalette();
+            const tl = gsap.timeline();
+            tl.to('.transition-slice', { scaleY: 1, duration: 0.5, ease: 'power3.inOut', stagger: 0.1 })
+              .call(() => {
+                  document.getElementById('landingContent').classList.add('hidden');
+                  document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
+                  if(pageId === 'home') document.getElementById('landingContent').classList.remove('hidden');
+                  else document.getElementById(pageId + 'Page')?.classList.add('active');
+                  
+                  document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                  document.querySelectorAll(`[onclick*="'${pageId}'"]`).forEach(l => { if(l.classList.contains('nav-link')) l.classList.add('active'); });
+                  lucide.createIcons();
+              })
+              .to('.transition-slice', { scaleY: 0, duration: 0.5, ease: 'power3.inOut', stagger: 0.1, transformOrigin: 'top' })
+              .call(() => {
+                  if (sectionId && pageId === 'home') {
+                      const section = document.getElementById(sectionId);
+                      if (section) lenis.scrollTo(section, { offset: -80, duration: 1.2 });
+                  } else { window.scrollTo(0,0); }
+              });
+        }
+
+        function toggleMobileMenu() { 
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('hamburgerBtn');
+            if(menu && btn) { menu.classList.toggle('translate-x-full'); btn.classList.toggle('active'); }
+        }
+        function closeMobileMenu() { 
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('hamburgerBtn');
+            if(menu && btn) { menu.classList.add('translate-x-full'); btn.classList.remove('active'); }
+        }
+
+        let cmdIndex = 0;
+        const cmdItems = document.querySelectorAll('.cmd-item');
+        function openCommandPalette() { document.getElementById('commandPalette').classList.add('active'); setTimeout(() => document.getElementById('commandInput').focus(), 100); lenis.stop(); }
+        function closeCommandPalette() { document.getElementById('commandPalette').classList.remove('active'); lenis.start(); }
+        document.getElementById('commandInput').addEventListener('keydown', e => {
+            if (e.key === 'ArrowDown') { e.preventDefault(); cmdIndex = (cmdIndex + 1) % cmdItems.length; updateCmdHighlight(); }
+            if (e.key === 'ArrowUp') { e.preventDefault(); cmdIndex = (cmdIndex - 1 + cmdItems.length) % cmdItems.length; updateCmdHighlight(); }
+            if (e.key === 'Enter') { e.preventDefault(); cmdItems[cmdIndex].click(); }
+        });
+        function updateCmdHighlight() { cmdItems.forEach((btn, idx) => { if (idx === cmdIndex) btn.classList.add('active'); else btn.classList.remove('active'); }); }
+        cmdItems.forEach((btn, idx) => {
+            btn.addEventListener('mouseenter', () => { cmdIndex = idx; updateCmdHighlight(); });
+            btn.addEventListener('click', () => {
+                if(btn.dataset.type === 'page') navigateTo(btn.dataset.section);
+                else navigateTo('home', btn.dataset.section);
+            });
+        });
+
+        // 6. Visual Interactions
+        const rolesList = ['Poet & Developer', 'Voiceover Artist', 'Script Writer', 'Creative Technologist'];
+        let charIndex = 0; let roleIndex = 0; let isDeleting = false;
+        function typeWriter() {
+            const el = document.getElementById('rotatingText');
+            if(!el) return;
+            const current = rolesList[roleIndex];
+            if (isDeleting) { el.textContent = current.substring(0, charIndex - 1); charIndex--; } 
+            else { el.textContent = current.substring(0, charIndex + 1); charIndex++; }
+            if (!isDeleting && charIndex === current.length) setTimeout(() => { isDeleting = true; typeWriter(); }, 2000);
+            else if (isDeleting && charIndex === 0) { isDeleting = false; roleIndex = (roleIndex + 1) % rolesList.length; setTimeout(typeWriter, 500); } 
+            else setTimeout(typeWriter, isDeleting ? 50 : 100);
+        }
+        setTimeout(typeWriter, 1000);
+
+        const skills = ['React', 'Next.js', 'Tailwind', 'Tone.js', 'Three.js', 'GSAP', 'Lenis', 'UI/UX'];
+        const mHtml = skills.map(s => `<div class="flex items-center gap-2 text-sm text-gray-400 font-medium"><i data-lucide="check-circle" class="w-4 h-4 text-accent-500"></i> ${s}</div>`).join('');
+        if(document.getElementById('marquee-content-1')) document.getElementById('marquee-content-1').innerHTML = mHtml;
+        if(document.getElementById('marquee-content-2')) document.getElementById('marquee-content-2').innerHTML = mHtml;
+
+        function showToast(msg, isError = false) {
+            const t = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = msg;
+            const iconWrapper = document.getElementById('toastIconWrapper');
+            // Fix: Create new i tag to prevent SVG replace issues with Lucide
+            const newIcon = document.createElement('i');
+            newIcon.setAttribute('data-lucide', isError ? 'alert-circle' : 'check-circle');
+            newIcon.className = 'w-5 h-5';
+            iconWrapper.innerHTML = '';
+            iconWrapper.appendChild(newIcon);
+            if(isError) { t.classList.add('toast-error'); } 
+            else { t.classList.remove('toast-error'); }
+            lucide.createIcons();
+            t.classList.add('show');
+            setTimeout(()=>t.classList.remove('show'), 3000);
+        }
+
+        // Consolidated Form Submission Handler (Web3Forms)
+        document.querySelectorAll('form.web3form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<svg class="animate-spin w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" class="opacity-25"></circle><path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" class="opacity-75"></path></svg> Sending...';
+                btn.disabled = true;
+
+                const formData = new FormData(this);
+                formData.append('access_key', CONFIG.WEB3FORMS_ACCESS_KEY);
+
+                fetch(this.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } })
+                .then(r => r.ok ? r : Promise.reject())
+                .then(() => {
+                    btn.innerHTML = '<i data-lucide="check" class="w-4 h-4 mr-2"></i> Sent!';
+                    form.reset(); showToast('Message sent securely!');
+                })
+                .catch(() => { btn.innerHTML = '<i data-lucide="x" class="w-4 h-4 mr-2"></i> Error'; showToast('Failed to send message.', true); })
+                .finally(() => setTimeout(() => { btn.innerHTML = originalHTML; btn.disabled = false; lucide.createIcons(); }, 3000));
+            });
+        });
+
+        // 7. ThreeJS Hero Animation (Torus Knot Particles)
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('three-canvas'), alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        
+        const geometry = new THREE.TorusKnotGeometry(2.5, 0.8, 150, 20);
+        const material = new THREE.PointsMaterial({ color: 0xa855f7, size: 0.02, transparent: true, opacity: 0.8 });
+        const shape = new THREE.Points(geometry, material);
+        scene.add(shape); camera.position.z = 7;
+
+        let mouseX = 0; let mouseY = 0;
+        document.addEventListener('mousemove', e => { mouseX = (e.clientX / window.innerWidth) * 2 - 1; mouseY = -(e.clientY / window.innerHeight) * 2 + 1; });
+
+        let isHeroVisible = true;
+        const heroObserver = new IntersectionObserver(entries => { isHeroVisible = entries[0].isIntersecting; });
+        heroObserver.observe(document.getElementById('hero'));
+
+        function animateThree() {
+            requestAnimationFrame(animateThree);
+            if (!isHeroVisible) return;
+            shape.rotation.x += 0.001; shape.rotation.y += 0.002;
+            gsap.to(shape.position, { x: mouseX * 0.8, y: mouseY * 0.8, duration: 2, ease: 'power2.out' });
+            renderer.render(scene, camera);
+        }
+        animateThree();
+        window.addEventListener('resize', () => { camera.aspect = window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight); });
+
+        // 8. Modals & Interaction Logic
+        const blogArticles = {
+            1: { content: '<h2 class="text-3xl font-bold mb-4">The Art of Poetic Voice: Finding Your Rhythm</h2><p class="text-gray-300">Poetry is not merely words arranged on a page — it is the music of language, the heartbeat of emotion, the architecture of human experience. Finding your poetic voice is a journey that every writer must undertake, and it begins with understanding the rhythm that lives within you.</p><blockquote>"Poetry is the rhythmical creation of beauty in words." — Edgar Allan Poe</blockquote><p class="text-gray-300">When I first began writing poetry, I was obsessed with meter and form. I studied sonnets, villanelles, and sestinas, trying to force my thoughts into predetermined structures. It wasn\'t until I let go of those constraints that I found my authentic voice — one that breathed naturally, with its own unique rhythm.</p>' },
+            2: { content: '<h2 class="text-3xl font-bold mb-4">Building Scalable Web Apps in 2026</h2><p class="text-gray-300">The landscape of web development has evolved dramatically. In 2026, building scalable applications requires a deep understanding of modern architecture patterns, cloud-native technologies, and user-centric design principles.</p><blockquote>"The best architecture is the one your team can understand and maintain."</blockquote><p class="text-gray-300">Traditional server architectures are rapidly being replaced by serverless functions and edge computing. This shift isn\'t just about cost savings — it\'s about performance. By running code closer to users, we\'ve seen latency drop from hundreds of milliseconds to single digits.</p>' },
+            3: { content: '<h2 class="text-3xl font-bold mb-4">Self-Publishing Guide: Draft to Distribution</h2><p class="text-gray-300">Self-publishing has never been more accessible. With the right knowledge and tools, anyone can take their manuscript from a rough draft to a professionally published book available worldwide. This comprehensive guide walks you through every step of the process.</p><blockquote>"The first draft is just you telling yourself the story. The second draft is you telling it to someone else."</blockquote><p class="text-gray-300">Before anything else, you need a finished manuscript. This means more than just writing "The End" — it means revising, editing, and polishing until every word earns its place on the page.</p>' }
+        };
+        function openBlogModal(id) {
+            const a = blogArticles[id]; if(!a) return;
+            document.getElementById('blogModalContent').innerHTML = a.content;
+            document.getElementById('blogModal').classList.add('active'); lenis.stop();
+        }
+        function closeBlogModal() { document.getElementById('blogModal').classList.remove('active'); lenis.start(); }
+
+        function downloadBook(title) { showToast(`Downloading "${title}"...`); }
+        document.querySelectorAll('.project-filter2').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.project-filter2').forEach(b => { b.classList.remove('active','bg-accent/10','text-accent-400','border-accent/20'); b.classList.add('bg-white/5','text-gray-400','border-white/10'); });
+                btn.classList.add('active','bg-accent/10','text-accent-400','border-accent/20'); btn.classList.remove('bg-white/5','text-gray-400','border-white/10');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('#projectsGrid2 .project-card').forEach(card => card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none');
+                playTick();
+            });
+        });
+
+        // 9. Custom Mouse Cursor tracking
+        const cursor = document.getElementById('cursor'); const cursorDot = document.getElementById('cursorDot');
+        if (window.innerWidth > 1024) {
+            document.addEventListener('mousemove', e => { if(!cursor.classList.contains('snapping')) { gsap.to(cursor, {x: e.clientX, y: e.clientY, duration: 0.1}); gsap.to(cursorDot, {x: e.clientX, y: e.clientY, duration: 0.05}); }});
+            document.querySelectorAll('.magnetic-btn, .social-icon, .nav-link, button, a').forEach(el => {
+                el.addEventListener('mousemove', e => {
+                    const rect = el.getBoundingClientRect(); const cx = rect.left + rect.width/2; const cy = rect.top + rect.height/2;
+                    cursor.classList.add('snapping'); gsap.to(cursor, {x: cx, y: cy, width: rect.width+10, height: rect.height+10, borderRadius: window.getComputedStyle(el).borderRadius, backgroundColor: 'rgba(168,85,247,0.1)', duration: 0.2}); gsap.to(cursorDot, {opacity: 0, duration: 0.1});
+                });
+                el.addEventListener('mouseleave', () => { cursor.classList.remove('snapping'); gsap.to(cursor, {width: 20, height: 20, borderRadius: '50%', backgroundColor: 'transparent', duration: 0.2}); gsap.to(cursorDot, {opacity: 1, duration: 0.1}); });
+            });
+        }
+
+        // 10. Initializing scroll animations
+        document.querySelectorAll('.img-reveal').forEach(img => ScrollTrigger.create({ trigger: img, start: 'top 80%', onEnter: () => img.classList.add('revealed') }));
+        document.querySelectorAll('.timeline-item, .service-card, .project-card, .book-card').forEach(el => gsap.from(el, { scrollTrigger: { trigger: el, start: 'top 85%' }, opacity: 0, y: 40, duration: 0.6, ease: 'power3.out' }));
+    </script>
+</body>
+</html>
